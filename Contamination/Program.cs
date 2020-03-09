@@ -28,10 +28,10 @@ namespace Contamination
                     String line = reader.ReadLine();
                     int count = 0;
                     while ((line = reader.ReadLine()) != null && count <= 10)
-                    {
-                        count++;
+                    {                 
                         String[] args = line.Split(',');
-                        Console.WriteLine(args[0]);
+                        Console.WriteLine(args[count]);
+                        count++;
                     }
                     reader.Close();
                     stream.Close();
@@ -40,7 +40,7 @@ namespace Contamination
             }
             catch (WebException e)
             {
-                result = string.Format("fuck", e);
+                result = string.Format("F", e);
                 Console.WriteLine(result);
             }
 
