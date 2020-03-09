@@ -1,0 +1,11 @@
+C:\Users\Blanca\source\repos\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.exe
+C:\Users\Blanca\source\repos\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.deps.json
+C:\Users\Blanca\source\repos\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.runtimeconfig.json
+C:\Users\Blanca\source\repos\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.runtimeconfig.dev.json
+C:\Users\Blanca\source\repos\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.dll
+C:\Users\Blanca\source\repos\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.pdb
+C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.csprojAssemblyReference.cache
+C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.AssemblyInfoInputs.cache
+C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.AssemblyInfo.cs
+C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.dll
+C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.pdb

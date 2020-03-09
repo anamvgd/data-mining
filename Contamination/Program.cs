@@ -20,7 +20,7 @@ namespace Contamination
             string result = "";
             try
             {
-                var url = "https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/DATOS-DE-CALIDAD-DEL-AIRE-EN-COLOMBIA-2011-2017/ysq6-ri4e";
+                var url = "https://www.datos.gov.co/api/views/ysq6-ri4e/rows.csv?accessType=DOWNLOAD";
                 var client = new WebClient();
                 using (var stream = client.OpenRead(url))
                 using (var reader = new StreamReader(stream))
@@ -29,6 +29,7 @@ namespace Contamination
                     int count = 0;
                     while ((line = reader.ReadLine()) != null && count <= 10)
                     {
+                        count++;
                         String[] args = line.Split(',');
                         Console.WriteLine(args[0]);
                     }
