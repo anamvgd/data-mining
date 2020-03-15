@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj": {}
+    "D:\\CRISTIAN\\Documents\\GitHub\\data-mining\\Contamination\\Contamination.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj": {
+    "D:\\CRISTIAN\\Documents\\GitHub\\data-mining\\Contamination\\Contamination.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj",
+        "projectUniqueName": "D:\\CRISTIAN\\Documents\\GitHub\\data-mining\\Contamination\\Contamination.csproj",
         "projectName": "Contamination",
-        "projectPath": "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj",
-        "packagesPath": "C:\\Users\\Blanca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\obj\\",
+        "projectPath": "D:\\CRISTIAN\\Documents\\GitHub\\data-mining\\Contamination\\Contamination.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "D:\\CRISTIAN\\Documents\\GitHub\\data-mining\\Contamination\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Blanca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
