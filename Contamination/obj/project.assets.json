@@ -2971,19 +2971,19 @@
     ]
   },
   "packageFolders": {
-    "D:\\Usuarios\\1005869086\\.nuget\\packages\\": {}
+    "C:\\Users\\Blanca\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Usuarios\\1005869086\\Documents\\data-mining\\Contamination\\Contamination.csproj",
+      "projectUniqueName": "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj",
       "projectName": "Contamination",
-      "projectPath": "D:\\Usuarios\\1005869086\\Documents\\data-mining\\Contamination\\Contamination.csproj",
-      "packagesPath": "D:\\Usuarios\\1005869086\\.nuget\\packages\\",
-      "outputPath": "D:\\Usuarios\\1005869086\\Documents\\data-mining\\Contamination\\obj\\",
+      "projectPath": "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj",
+      "packagesPath": "C:\\Users\\Blanca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "D:\\Usuarios\\1005869086\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Blanca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3027,7 +3027,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
