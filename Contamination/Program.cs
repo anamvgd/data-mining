@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
+using SODA;
 namespace Contamination
 {
     class Program
@@ -15,12 +12,41 @@ namespace Contamination
             readInfo();
         }
 
+        /*
+        public static void Soda() {
+
+
+            // Install the package from Nuget first:
+            // PM> Install-Package CSM.SodaDotNet
+            
+
+            var client = new SodaClient("https://www.datos.gov.co", "oipJOeStVp83pvoG20CMSGiXe");
+
+            // Get a reference to the resource itself
+            // The result (a Resouce object) is a generic type
+            // The type parameter represents the underlying rows of the resource
+            // and can be any JSON-serializable class
+            var dataset = client.GetResource<Object>("ysq6-ri4e");
+
+            // Resource objects read their own data
+            var rows = dataset.GetRows(limit: 5000);
+
+            Console.WriteLine("Got {0} results. Dumping first results:", rows.Count());
+
+            foreach (var keyValue in rows)
+            {
+                Console.WriteLine(keyValue);
+            }
+
+        }
+        */
+
         public static void readInfo()
         {
             string result = "";
             try
             {
-                var url = "https://www.datos.gov.co/api/views/ysq6-ri4e/rows.csv?accessType=DOWNLOAD";
+                var url = "https://www.datos.gov.co/resource/ysq6-ri4e.json?nombre_del_municipio=BARBOSA&variable=PM2.5&$limit=10&$offset=20";
                 var client = new WebClient();
                 using (var stream = client.OpenRead(url))
                 using (var reader = new StreamReader(stream))

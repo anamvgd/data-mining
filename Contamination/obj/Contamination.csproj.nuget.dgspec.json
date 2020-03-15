@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj": {}
+    "D:\\Usuarios\\1005869086\\Documents\\data-mining\\Contamination\\Contamination.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj": {
+    "D:\\Usuarios\\1005869086\\Documents\\data-mining\\Contamination\\Contamination.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj",
+        "projectUniqueName": "D:\\Usuarios\\1005869086\\Documents\\data-mining\\Contamination\\Contamination.csproj",
         "projectName": "Contamination",
-        "projectPath": "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\Contamination.csproj",
-        "packagesPath": "C:\\Users\\Blanca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Blanca\\source\\repos\\data-mining\\Contamination\\obj\\",
+        "projectPath": "D:\\Usuarios\\1005869086\\Documents\\data-mining\\Contamination\\Contamination.csproj",
+        "packagesPath": "D:\\Usuarios\\1005869086\\.nuget\\packages\\",
+        "outputPath": "D:\\Usuarios\\1005869086\\Documents\\data-mining\\Contamination\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Blanca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\Usuarios\\1005869086\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "CSM.SodaDotNet": {
+              "target": "Package",
+              "version": "[0.10.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

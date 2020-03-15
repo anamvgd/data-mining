@@ -9,3 +9,17 @@ C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\C
 C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.AssemblyInfo.cs
 C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.dll
 C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.pdb
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.exe
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.deps.json
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.runtimeconfig.json
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.runtimeconfig.dev.json
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.dll
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.pdb
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.csprojAssemblyReference.cache
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.AssemblyInfoInputs.cache
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.AssemblyInfo.cs
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.dll
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.pdb
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\bin\Debug\netcoreapp3.1\SODA.dll
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Usuarios\1005869086\Documents\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.csproj.CopyComplete
