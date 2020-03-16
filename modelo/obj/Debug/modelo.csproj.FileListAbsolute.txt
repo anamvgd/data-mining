@@ -1,0 +1,10 @@
+C:\Users\Blanca\source\repos\data-mining\modelo\bin\Debug\modelo.exe.config
+C:\Users\Blanca\source\repos\data-mining\modelo\bin\Debug\modelo.exe
+C:\Users\Blanca\source\repos\data-mining\modelo\bin\Debug\modelo.pdb
+C:\Users\Blanca\source\repos\data-mining\modelo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Blanca\source\repos\data-mining\modelo\bin\Debug\SODA.dll
+C:\Users\Blanca\source\repos\data-mining\modelo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Blanca\source\repos\data-mining\modelo\obj\Debug\modelo.csprojAssemblyReference.cache
+C:\Users\Blanca\source\repos\data-mining\modelo\obj\Debug\modelo.csproj.CopyComplete
+C:\Users\Blanca\source\repos\data-mining\modelo\obj\Debug\modelo.exe
+C:\Users\Blanca\source\repos\data-mining\modelo\obj\Debug\modelo.pdb

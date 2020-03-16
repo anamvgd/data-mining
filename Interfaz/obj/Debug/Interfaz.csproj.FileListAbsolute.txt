@@ -7,3 +7,10 @@ C:\Users\Blanca\source\repos\data-mining\Interfaz\obj\Debug\Interfaz.Properties.
 C:\Users\Blanca\source\repos\data-mining\Interfaz\obj\Debug\Interfaz.csproj.GenerateResource.cache
 C:\Users\Blanca\source\repos\data-mining\Interfaz\obj\Debug\Interfaz.exe
 C:\Users\Blanca\source\repos\data-mining\Interfaz\obj\Debug\Interfaz.pdb
+C:\Users\Blanca\source\repos\data-mining\Interfaz\bin\Debug\modelo.exe
+C:\Users\Blanca\source\repos\data-mining\Interfaz\bin\Debug\SODA.dll
+C:\Users\Blanca\source\repos\data-mining\Interfaz\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Blanca\source\repos\data-mining\Interfaz\bin\Debug\modelo.pdb
+C:\Users\Blanca\source\repos\data-mining\Interfaz\bin\Debug\modelo.exe.config
+C:\Users\Blanca\source\repos\data-mining\Interfaz\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Blanca\source\repos\data-mining\Interfaz\obj\Debug\Interfaz.csproj.CopyComplete

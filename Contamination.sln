@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contamination", "Contamination\Contamination.csproj", "{BD21F823-692B-47BA-B5CD-D2E0A96DDA70}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaz", "Interfaz\Interfaz.csproj", "{B13D408C-0277-4CE4-95FB-1709D8AFD132}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "modelo", "modelo\modelo.csproj", "{A3A5E364-7B5A-40AE-9315-54B2D6DAA151}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD21F823-692B-47BA-B5CD-D2E0A96DDA70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD21F823-692B-47BA-B5CD-D2E0A96DDA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD21F823-692B-47BA-B5CD-D2E0A96DDA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD21F823-692B-47BA-B5CD-D2E0A96DDA70}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B13D408C-0277-4CE4-95FB-1709D8AFD132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B13D408C-0277-4CE4-95FB-1709D8AFD132}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B13D408C-0277-4CE4-95FB-1709D8AFD132}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B13D408C-0277-4CE4-95FB-1709D8AFD132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3A5E364-7B5A-40AE-9315-54B2D6DAA151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A5E364-7B5A-40AE-9315-54B2D6DAA151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A5E364-7B5A-40AE-9315-54B2D6DAA151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A5E364-7B5A-40AE-9315-54B2D6DAA151}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
