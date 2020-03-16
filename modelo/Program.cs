@@ -12,6 +12,10 @@ namespace modelo
         static void Main(string[] args)
         {
         }
+        public Program()
+        {
+
+        }
 
         public static List<String> Soda(String bdId, String code)
         {
