@@ -9,10 +9,10 @@ namespace Contamination
     {
         static void Main(string[] argss)
         {
-            readInfo();
+            Soda();
         }
 
-        /*
+        
         public static void Soda() {
 
 
@@ -30,16 +30,17 @@ namespace Contamination
 
             // Resource objects read their own data
             var rows = dataset.GetRows(limit: 5000);
-
+            var columns = dataset.Columns;
             Console.WriteLine("Got {0} results. Dumping first results:", rows.Count());
 
-            foreach (var keyValue in rows)
+            foreach (var keyValue in columns)
             {
-                Console.WriteLine(keyValue);
+                Console.WriteLine(keyValue.Name);
+
             }
 
         }
-        */
+        
 
         public static void readInfo()
         {
