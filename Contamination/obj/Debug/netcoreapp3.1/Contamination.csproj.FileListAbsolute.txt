@@ -37,3 +37,17 @@ D:\CRISTIAN\Documents\GitHub\data-mining\Contamination\obj\Debug\netcoreapp3.1\C
 D:\CRISTIAN\Documents\GitHub\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.csproj.CopyComplete
 D:\CRISTIAN\Documents\GitHub\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.dll
 D:\CRISTIAN\Documents\GitHub\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.pdb
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.exe
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.deps.json
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.runtimeconfig.json
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.runtimeconfig.dev.json
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\bin\Debug\netcoreapp3.1\Contamination.pdb
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\bin\Debug\netcoreapp3.1\SODA.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.csprojAssemblyReference.cache
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.AssemblyInfoInputs.cache
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.AssemblyInfo.cs
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.csproj.CopyComplete
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.pdb

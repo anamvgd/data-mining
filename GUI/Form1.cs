@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +14,46 @@ namespace GUI
 {
     public partial class Form1 : Form
     {
+        private String url;
+        public static String FILTER1="?source=";
+        public static String FILTER2="?$select";
+        public static String FILTER3= "?$order";
+        public static String FILTER4= "?$offset";
+        public static String FILTER5 = "?$limit";
+        public static String FILTER6 = "?$where";
+
+        public static void readInfo(String url1)
+        {
+            string result = "";
+            try
+            {
+                var url = url1;
+                var client = new WebClient();
+                using (var stream = client.OpenRead(url))
+                using (var reader = new StreamReader(stream))
+                {
+                    String line = reader.ReadLine();
+                    int count = 0;
+                    while ((line = reader.ReadLine()) != null && count <= 10)
+                    {
+                        String[] args = line.Split(',');
+                        Console.WriteLine(args[count]);
+                        count++;
+                    }
+                    reader.Close();
+                    stream.Close();
+                }
+
+            }
+            catch (WebException e)
+            {
+                result = string.Format("F", e);
+                Console.WriteLine(result);
+            }
+
+        }
+
+
         public Form1()
         {
             InitializeComponent();
@@ -19,6 +61,17 @@ namespace GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            comboBoxFilters.Items.Add("Columna");
+            comboBoxFilters.Items.Add("Help me");
+            comboBoxFilters.Items.Add("Nose que colocar cambian esto");
+            comboBoxFilters.Items.Add("Se supone que es para los filtros");
+            comboBoxFilters.Items.Add("las constantes");
+            filter.Hide();
+            filters.Hide();
+            comboBoxFilters.Hide();
+            comboBoxData.Hide();
+            dataFilter.Hide();
+            filterAdded.Hide();
 
         }
 
@@ -35,6 +88,85 @@ namespace GUI
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                url = urlText.Text+"/"+codeData;
+                readInfo(url);
+                label1.Hide();
+                labelURL.Hide();
+                urlText.Hide();
+                codeData.Hide();
+                Console.WriteLine("Succesfull");
+                filter.Show();
+                filters.Show();
+                comboBoxFilters.Show();
+                comboBoxData.Show();
+                dataFilter.Show();
+                filterAdded.Show();
+
+
+            }
+            catch (ArgumentNullException ea) {
+                Console.WriteLine("Something its wrong");
+            }
+
+            
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+        /*
+        Metodo para crear la url para buscar los datos de acuerdo a los filtros que puso el usuario 
+        */
+        private void createURL() {
+
+           String[] cantidadDeFiltros= filters.Text.Split(' '); // Saber cuantos filtros tengo que añadir en la url
+            /*
+            aqui debe ir un ciclo o algo asi, para tomar cada uno de los filtros
+            y empezar a  añadirlos a la url (la url es un atributo de la clase)
+            luego de crear la url se llama a readData con la url transformada
+            */
+
+            /*
+             los filtros que se añaden a la url estan como constante, lee la api para ver que hace cada uno
+             https://dev.socrata.com/docs/queries/ ahi estan los significados y ya
+             */
+
+        }
+
+        private void searchData(object sender, EventArgs e)
+        {
+            /*
+             Aqui debes llamar al metodo createURL para poder buscar los datos
+             no se si deseas crear una nueva ventana o ocultar todo y trabajar 
+             en la misma pero solamente cuando le unda aqui ya muestre los datos
+             */
         }
     }
 }

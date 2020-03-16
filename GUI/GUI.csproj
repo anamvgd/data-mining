@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contamination\Contamination.csproj">
+      <Project>{bd21f823-692b-47ba-b5cd-d2e0a96dda70}</Project>
+      <Name>Contamination</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
