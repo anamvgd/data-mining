@@ -43,8 +43,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -63,7 +63,6 @@
             this.labelURL.Size = new System.Drawing.Size(86, 13);
             this.labelURL.TabIndex = 1;
             this.labelURL.Text = "Id base de datos";
-            this.labelURL.Click += new System.EventHandler(this.label1_Click);
             // 
             // searchButton
             // 
@@ -106,7 +105,6 @@
             this.filter.Size = new System.Drawing.Size(34, 13);
             this.filter.TabIndex = 39;
             this.filter.Text = "Filtros";
-            this.filter.Click += new System.EventHandler(this.label2_Click_2);
             // 
             // comboBoxFilters
             // 
@@ -115,7 +113,6 @@
             this.comboBoxFilters.Name = "comboBoxFilters";
             this.comboBoxFilters.Size = new System.Drawing.Size(200, 21);
             this.comboBoxFilters.TabIndex = 40;
-            this.comboBoxFilters.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilters_SelectedIndexChanged);
             // 
             // filterAdded
             // 
@@ -125,7 +122,6 @@
             this.filterAdded.Size = new System.Drawing.Size(81, 13);
             this.filterAdded.TabIndex = 41;
             this.filterAdded.Text = "Filtros Añadidos";
-            this.filterAdded.Click += new System.EventHandler(this.label3_Click);
             // 
             // dataFilter
             // 
@@ -135,7 +131,6 @@
             this.dataFilter.Size = new System.Drawing.Size(80, 13);
             this.dataFilter.TabIndex = 42;
             this.dataFilter.Text = "Dato Para Filtro";
-            this.dataFilter.Click += new System.EventHandler(this.label4_Click);
             // 
             // filters
             // 
@@ -145,7 +140,6 @@
             this.filters.Size = new System.Drawing.Size(49, 13);
             this.filters.TabIndex = 44;
             this.filters.Text = "Sin filtros";
-            this.filters.Click += new System.EventHandler(this.label5_Click);
             // 
             // button1
             // 
@@ -203,6 +197,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search";
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(111, 62);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(200, 20);
+            this.textBoxSearch.TabIndex = 45;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dataGridView);
@@ -212,13 +213,6 @@
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos";
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(111, 62);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(200, 20);
-            this.textBoxSearch.TabIndex = 45;
             // 
             // groupBox5
             // 

@@ -36,26 +36,6 @@ namespace Interfaz
            
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void searchButton_Click(object sender, EventArgs e)
         {
             try
@@ -86,25 +66,6 @@ namespace Interfaz
            
         }
 
-        private void label2_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
        
 
         private void searchData(object sender, EventArgs e)
@@ -196,16 +157,6 @@ namespace Interfaz
                 result = string.Format("F", e);
                 Console.WriteLine(result);
             }
-
-        }
-
-        private void comboBoxFilters_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_3(object sender, EventArgs e)
-        {
 
         }
 
