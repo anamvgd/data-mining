@@ -36,9 +36,6 @@ namespace Interfaz
             dataFilter.Hide();
             filterAdded.Hide();
             addButton.Hide();
-            comboBoxFilters.Items.Add("nombre_del_municipio");
-
-
         }
 
         private void searchButton_Click(object sender, EventArgs e)
