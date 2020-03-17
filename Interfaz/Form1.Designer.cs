@@ -41,14 +41,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.addButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -68,9 +67,9 @@
             // 
             this.searchButton.Location = new System.Drawing.Point(24, 338);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(117, 23);
+            this.searchButton.Size = new System.Drawing.Size(140, 23);
             this.searchButton.TabIndex = 35;
-            this.searchButton.Text = "Cargar Datos";
+            this.searchButton.Text = "Buscar Base de Datos";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
@@ -80,6 +79,7 @@
             this.urlText.Name = "urlText";
             this.urlText.Size = new System.Drawing.Size(200, 20);
             this.urlText.TabIndex = 36;
+            this.urlText.Text = "ysq6-ri4e";
             // 
             // label1
             // 
@@ -96,6 +96,7 @@
             this.codeData.Name = "codeData";
             this.codeData.Size = new System.Drawing.Size(200, 20);
             this.codeData.TabIndex = 38;
+            this.codeData.Text = "oipJOeStVp83pvoG20CMSGiXe";
             // 
             // filter
             // 
@@ -165,7 +166,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(355, 100);
@@ -173,17 +173,9 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Base de datos ";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(104, 38);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(18, 8);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.addButton);
             this.groupBox3.Controls.Add(this.textBoxSearch);
             this.groupBox3.Controls.Add(this.filters);
             this.groupBox3.Controls.Add(this.dataFilter);
@@ -192,7 +184,7 @@
             this.groupBox3.Controls.Add(this.filter);
             this.groupBox3.Location = new System.Drawing.Point(12, 157);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(354, 140);
+            this.groupBox3.Size = new System.Drawing.Size(406, 175);
             this.groupBox3.TabIndex = 48;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search";
@@ -236,6 +228,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(334, 214);
             this.dataGridView1.TabIndex = 0;
             // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(317, 60);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.TabIndex = 46;
+            this.addButton.Text = "Agregar";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,7 +257,6 @@
             this.Text = "Buscador";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -280,12 +281,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button addButton;
     }
 }
 

@@ -13,6 +13,7 @@ namespace Interfaz
     {
         DataTable dt;
         private String url;
+        private String addLink;
         public static String FILTER1="?source=";
         public static String FILTER2="?$select";
         public static String FILTER3= "?$order";
@@ -27,13 +28,17 @@ namespace Interfaz
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            addLink = "";
             filter.Hide();
             filters.Hide();
             comboBoxFilters.Hide();
             textBoxSearch.Hide();
             dataFilter.Hide();
             filterAdded.Hide();
-           
+            addButton.Hide();
+            comboBoxFilters.Items.Add("nombre_del_municipio");
+
+
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -56,6 +61,7 @@ namespace Interfaz
                 textBoxSearch.Show();
                 dataFilter.Show();
                 filterAdded.Show();
+                addButton.Show();
                 searchButton.Hide();
 
             }
@@ -133,7 +139,8 @@ namespace Interfaz
             try
             {
  
-                var url = "https://www.datos.gov.co/resource/ysq6-ri4e.json?nombre_del_municipio=BARBOSA&variable=PM2.5&$limit=10&$offset=20";
+                //var url = "https://www.datos.gov.co/resource/ysq6-ri4e.json?nombre_del_municipio=BARBOSA&variable=PM2.5&$limit=10&$offset=20";
+                var url = "https://www.datos.gov.co/resource/" + bdId + ".json?" + addLink + "&$limit=10&$offset=20";
                 var client = new WebClient();
                 using (var stream = client.OpenRead(url))
                 using (var reader = new StreamReader(stream))
@@ -178,6 +185,36 @@ namespace Interfaz
             dataGridView1.DataSource = dt;
             dt.Rows.Add("a","b");
             
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            String comboBoxMinus = comboBoxFilters.Text.ToLower();
+            String[] comboBoxSep = comboBoxMinus.Split(' ');
+            comboBoxMinus = comboBoxSep.GetValue(0).ToString();
+            String comboFixed;
+            for (int i=1; i<comboBoxSep.Length; i++)
+            {
+                comboBoxMinus = comboBoxMinus + "_" + comboBoxSep.GetValue(i);
+            }
+            comboFixed = comboBoxMinus;
+            if (!addLink.Equals(""))
+            {
+                addLink = addLink + "&" + comboFixed + "=" + textBoxSearch.Text;
+            }
+            else 
+            {
+                addLink = comboFixed + "=" + textBoxSearch.Text;
+            }
+
+            if (!filters.Text.Equals("Sin filtros")) 
+            {
+                filters.Text = filters.Text + "\n" + comboBoxFilters.Text + ": " + textBoxSearch.Text;
+            }
+            else 
+            {
+                filters.Text = comboBoxFilters.Text + ": " + textBoxSearch.Text;
+            }
         }
     }
 }
