@@ -42,11 +42,12 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.addButton = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.addButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -65,7 +66,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(24, 338);
+            this.searchButton.Location = new System.Drawing.Point(24, 403);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(140, 23);
             this.searchButton.TabIndex = 35;
@@ -144,7 +145,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(229, 338);
+            this.button1.Location = new System.Drawing.Point(229, 403);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 23);
             this.button1.TabIndex = 45;
@@ -160,7 +161,7 @@
             this.dataGridView.Location = new System.Drawing.Point(20, 19);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(334, 169);
+            this.dataGridView.Size = new System.Drawing.Size(458, 169);
             this.dataGridView.TabIndex = 46;
             this.dataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.selectCase);
             // 
@@ -184,10 +185,20 @@
             this.groupBox3.Controls.Add(this.filter);
             this.groupBox3.Location = new System.Drawing.Point(12, 157);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(406, 175);
+            this.groupBox3.Size = new System.Drawing.Size(406, 240);
             this.groupBox3.TabIndex = 48;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search";
+            // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(317, 60);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.TabIndex = 46;
+            this.addButton.Text = "Agregar";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // textBoxSearch
             // 
@@ -201,7 +212,7 @@
             this.groupBox4.Controls.Add(this.dataGridView);
             this.groupBox4.Location = new System.Drawing.Point(424, 35);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(375, 204);
+            this.groupBox4.Size = new System.Drawing.Size(484, 204);
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos";
@@ -228,21 +239,22 @@
             this.dataGridView1.Size = new System.Drawing.Size(334, 214);
             this.dataGridView1.TabIndex = 0;
             // 
-            // addButton
+            // deleteButton
             // 
-            this.addButton.Location = new System.Drawing.Point(317, 60);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
-            this.addButton.TabIndex = 46;
-            this.addButton.Text = "Agregar";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.deleteButton.Location = new System.Drawing.Point(229, 447);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(109, 23);
+            this.deleteButton.TabIndex = 51;
+            this.deleteButton.Text = "Eliminar filtros";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 563);
+            this.ClientSize = new System.Drawing.Size(920, 575);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -287,6 +299,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button deleteButton;
     }
 }
 

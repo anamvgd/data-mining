@@ -18,3 +18,13 @@ C:\Users\Militarrr\Documents\GitHub\data-mining\modelo\obj\Debug\modelo.csprojAs
 C:\Users\Militarrr\Documents\GitHub\data-mining\modelo\obj\Debug\modelo.csproj.CopyComplete
 C:\Users\Militarrr\Documents\GitHub\data-mining\modelo\obj\Debug\modelo.exe
 C:\Users\Militarrr\Documents\GitHub\data-mining\modelo\obj\Debug\modelo.pdb
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\bin\Debug\modelo.exe.config
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\bin\Debug\modelo.exe
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\bin\Debug\modelo.pdb
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\bin\Debug\SODA.dll
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\obj\Debug\modelo.csprojAssemblyReference.cache
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\obj\Debug\modelo.csproj.CopyComplete
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\obj\Debug\modelo.exe
+C:\Users\Ana_2\Source\Repos\data-mining\modelo\obj\Debug\modelo.pdb
