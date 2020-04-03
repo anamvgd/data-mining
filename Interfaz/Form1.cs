@@ -71,6 +71,8 @@ namespace Interfaz
        
         private void searchData(object sender, EventArgs e)
         {   
+           // dataGridView.DataSource = dt;
+
             readInfo(urlText.Text);
 
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -207,7 +209,8 @@ namespace Interfaz
         private void button2_Click(object sender, EventArgs e)
         {
             filters.Text = "Sin filtros";
-            dataGridView.DataSource = null;
+            dataGridView.Rows.Clear();
+
         }
     }
 }
