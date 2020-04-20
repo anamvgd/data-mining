@@ -10,6 +10,14 @@
 This project aims to analyze data on air pollution particles taken from a public database obtained from <a href="datos.gov.co">Colombia's Open Data</a> 
 </p>
 <p>
+ <h5>
+Video of the second installment of the project <a href="https://www.youtube.com/watch?v=HDdGJ94RRJE">here</a>
+ </h5>
+ 
+</p>
+ 
+ 
+<p>
 The stages of development of this project are distributed in the following installments:
 </p>
 <br>
