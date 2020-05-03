@@ -16,10 +16,10 @@ namespace GUI
     public partial class Form1 : Form
     {
         private String url;
-        public static String FILTER1="?source=";
-        public static String FILTER2="?$select";
-        public static String FILTER3= "?$order";
-        public static String FILTER4= "?$offset";
+        public static String FILTER1 = "?source=";
+        public static String FILTER2 = "?$select";
+        public static String FILTER3 = "?$order";
+        public static String FILTER4 = "?$offset";
         public static String FILTER5 = "?$limit";
         public static String FILTER6 = "?$where";
 
@@ -95,7 +95,7 @@ namespace GUI
         {
             try
             {
-                url = urlText.Text+"/"+codeData;
+                url = urlText.Text + "/" + codeData;
                 readInfo(url);
                 label1.Hide();
                 labelURL.Hide();
@@ -111,11 +111,12 @@ namespace GUI
 
 
             }
-            catch (ArgumentNullException ea) {
+            catch (ArgumentNullException ea)
+            {
                 Console.WriteLine("Something its wrong");
             }
 
-            
+
         }
 
         private void label2_Click_2(object sender, EventArgs e)
@@ -137,13 +138,12 @@ namespace GUI
         {
 
         }
-       
 
         private void searchData(object sender, EventArgs e)
         {
             /*
              Aqui debes llamar al metodo createURL para poder buscar los datos
-             no se si deseas crear una nueva ventana o ocultar todo y trabajar 
+             no se si deseas crear una nueva ventana o ocultar todo y trabajar
              en la misma pero solamente cuando le unda aqui ya muestre los datos
              */
        }

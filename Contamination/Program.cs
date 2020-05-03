@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -9,11 +10,11 @@ namespace Contamination
     {
         static void Main(string[] argss)
         {
-            readInfo();
+            
         }
 
-        /*
-        public static void Soda() {
+        
+        public static List<String> Soda(String bdId, String code) {
 
 
             // Install the package from Nuget first:
@@ -29,19 +30,21 @@ namespace Contamination
             var dataset = client.GetResource<Object>("ysq6-ri4e");
 
             // Resource objects read their own data
-            var rows = dataset.GetRows(limit: 5000);
-
+            /*var rows = dataset.GetRows(limit: 5000);         
             Console.WriteLine("Got {0} results. Dumping first results:", rows.Count());
-
-            foreach (var keyValue in rows)
+            */
+            var columns = dataset.Columns;
+            List<String> l = new List<String>();
+            foreach (var keyValue in columns)
             {
-                Console.WriteLine(keyValue);
+                l.Add(keyValue.Name);
+
             }
-
+            return l;
         }
-        */
+        
 
-        public static void readInfo()
+        public static void readInfo(String bdId)
         {
             string result = "";
             try

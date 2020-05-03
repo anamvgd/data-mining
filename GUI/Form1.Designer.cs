@@ -54,19 +54,23 @@ namespace GUI
             this.filters = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // labelURL
             // 
             this.labelURL.AutoSize = false;
+
+            //
+            this.labelURL.AutoSize = true;
+
             this.labelURL.Location = new System.Drawing.Point(84, 74);
             this.labelURL.Name = "labelURL";
             this.labelURL.Size = new System.Drawing.Size(29, 13);
             this.labelURL.TabIndex = 1;
             this.labelURL.Text = "URL";
             this.labelURL.Click += new System.EventHandler(this.label1_Click);
-            // 
+            //
             // searchButton
-            // 
+            //
             this.searchButton.Location = new System.Drawing.Point(87, 393);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(117, 23);
@@ -74,32 +78,32 @@ namespace GUI
             this.searchButton.Text = "Cargar Datos";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-            // 
+            //
             // urlText
-            // 
+            //
             this.urlText.Location = new System.Drawing.Point(129, 67);
             this.urlText.Name = "urlText";
             this.urlText.Size = new System.Drawing.Size(200, 20);
             this.urlText.TabIndex = 36;
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(21, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 37;
             this.label1.Text = "Codigo Unico Datos";
-            // 
+            //
             // codeData
-            // 
+            //
             this.codeData.Location = new System.Drawing.Point(129, 116);
             this.codeData.Name = "codeData";
             this.codeData.Size = new System.Drawing.Size(200, 20);
             this.codeData.TabIndex = 38;
-            // 
+            //
             // filter
-            // 
+            //
             this.filter.AutoSize = true;
             this.filter.Location = new System.Drawing.Point(78, 167);
             this.filter.Name = "filter";
@@ -107,17 +111,17 @@ namespace GUI
             this.filter.TabIndex = 39;
             this.filter.Text = "Filtros";
             this.filter.Click += new System.EventHandler(this.label2_Click_2);
-            // 
+            //
             // comboBoxFilters
-            // 
+            //
             this.comboBoxFilters.FormattingEnabled = true;
             this.comboBoxFilters.Location = new System.Drawing.Point(129, 167);
             this.comboBoxFilters.Name = "comboBoxFilters";
             this.comboBoxFilters.Size = new System.Drawing.Size(200, 21);
             this.comboBoxFilters.TabIndex = 40;
-            // 
+            //
             // filterAdded
-            // 
+            //
             this.filterAdded.AutoSize = true;
             this.filterAdded.Location = new System.Drawing.Point(42, 259);
             this.filterAdded.Name = "filterAdded";
@@ -125,9 +129,9 @@ namespace GUI
             this.filterAdded.TabIndex = 41;
             this.filterAdded.Text = "Filtros Añadidos";
             this.filterAdded.Click += new System.EventHandler(this.label3_Click);
-            // 
+            //
             // dataFilter
-            // 
+            //
             this.dataFilter.AutoSize = true;
             this.dataFilter.Location = new System.Drawing.Point(33, 219);
             this.dataFilter.Name = "dataFilter";
@@ -135,17 +139,17 @@ namespace GUI
             this.dataFilter.TabIndex = 42;
             this.dataFilter.Text = "Dato Para Filtro";
             this.dataFilter.Click += new System.EventHandler(this.label4_Click);
-            // 
+            //
             // comboBoxData
-            // 
+            //
             this.comboBoxData.FormattingEnabled = true;
             this.comboBoxData.Location = new System.Drawing.Point(129, 210);
             this.comboBoxData.Name = "comboBoxData";
             this.comboBoxData.Size = new System.Drawing.Size(200, 21);
             this.comboBoxData.TabIndex = 43;
-            // 
+            //
             // filters
-            // 
+            //
             this.filters.AutoSize = true;
             this.filters.Location = new System.Drawing.Point(140, 258);
             this.filters.Name = "filters";
@@ -153,9 +157,9 @@ namespace GUI
             this.filters.TabIndex = 44;
             this.filters.Text = "Sin filtros";
             this.filters.Click += new System.EventHandler(this.label5_Click);
-            // 
+            //
             // button1
-            // 
+            //
             this.button1.Location = new System.Drawing.Point(275, 393);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 23);
@@ -163,9 +167,9 @@ namespace GUI
             this.button1.Text = "Buscar Datos";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.searchData);
-            // 
+            //
             // Form1
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 439);

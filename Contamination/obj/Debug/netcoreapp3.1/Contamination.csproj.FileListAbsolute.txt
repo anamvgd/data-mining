@@ -51,3 +51,6 @@ C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcore
 C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.csproj.CopyComplete
 C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.dll
 C:\Users\jdjim\Documents\Proyectos U\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.pdb
+C:\Users\Blanca\source\repos\data-mining\Contamination\bin\Debug\netcoreapp3.1\SODA.dll
+C:\Users\Blanca\source\repos\data-mining\Contamination\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Blanca\source\repos\data-mining\Contamination\obj\Debug\netcoreapp3.1\Contamination.csproj.CopyComplete
