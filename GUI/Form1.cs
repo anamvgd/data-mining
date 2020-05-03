@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GUI
 {
     public partial class Form1 : Form
@@ -56,7 +57,7 @@ namespace GUI
 
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponents();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace GUI
             comboBoxData.Hide();
             dataFilter.Hide();
             filterAdded.Hide();
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -81,11 +82,6 @@ namespace GUI
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -141,24 +137,7 @@ namespace GUI
         {
 
         }
-        /*
-        Metodo para crear la url para buscar los datos de acuerdo a los filtros que puso el usuario 
-        */
-        private void createURL() {
-
-           String[] cantidadDeFiltros= filters.Text.Split(' '); // Saber cuantos filtros tengo que añadir en la url
-            /*
-            aqui debe ir un ciclo o algo asi, para tomar cada uno de los filtros
-            y empezar a  añadirlos a la url (la url es un atributo de la clase)
-            luego de crear la url se llama a readData con la url transformada
-            */
-
-            /*
-             los filtros que se añaden a la url estan como constante, lee la api para ver que hace cada uno
-             https://dev.socrata.com/docs/queries/ ahi estan los significados y ya
-             */
-
-        }
+       
 
         private void searchData(object sender, EventArgs e)
         {
@@ -167,6 +146,6 @@ namespace GUI
              no se si deseas crear una nueva ventana o ocultar todo y trabajar 
              en la misma pero solamente cuando le unda aqui ya muestre los datos
              */
-        }
+       }
     }
 }
