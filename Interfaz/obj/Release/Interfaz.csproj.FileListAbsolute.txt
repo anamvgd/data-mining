@@ -1,0 +1,17 @@
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\obj\Release\Interfaz.csprojAssemblyReference.cache
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\obj\Release\Interfaz.Form1.resources
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\obj\Release\Interfaz.Form2.resources
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\obj\Release\Interfaz.Properties.Resources.resources
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\obj\Release\Interfaz.csproj.GenerateResource.cache
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Release\Interfaz.exe.config
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Release\Interfaz.exe
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Release\Interfaz.pdb
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Release\modelo.exe
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Release\Newtonsoft.Json.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Release\SODA.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Release\modelo.pdb
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Release\modelo.exe.config
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Release\Newtonsoft.Json.xml
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\obj\Release\Interfaz.csproj.CopyComplete
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\obj\Release\Interfaz.exe
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\obj\Release\Interfaz.pdb
