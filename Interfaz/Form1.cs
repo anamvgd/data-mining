@@ -14,6 +14,11 @@ namespace Interfaz
         DataTable dt;
         private String url;
         private String addLink;
+        private List<Double> latitudes= new List<Double>();
+        private List<Double> longitudes = new List<Double>();
+        private List<String> departamentos = new List<string>();
+        private List<String> fechas = new List<string>();
+        private List<String> tipoVariable = new List<string>();
         public static String FILTER1 = "?source=";
         public static String FILTER2 = "?$select";
         public static String FILTER3 = "?$order";
@@ -136,7 +141,7 @@ namespace Interfaz
             {
 
                 //var url = "https://www.datos.gov.co/resource/ysq6-ri4e.json?nombre_del_municipio=BARBOSA&variable=PM2.5&$limit=10&$offset=20";
-                var url = "https://www.datos.gov.co/resource/" + bdId + ".json?" + addLink + "&$limit=10&$offset=20";
+                var url = "https://www.datos.gov.co/resource/" + bdId + ".json?" + addLink;
                 var client = new WebClient();
                 using (var stream = client.OpenRead(url))
                 using (var reader = new StreamReader(stream))
@@ -145,9 +150,32 @@ namespace Interfaz
                     int count = 0;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        Console.WriteLine("entro");
                         String[] args = line.Split(',');
-                        dt.Rows.Add("" + args[1], "" + args[2], "" + args[3], "" + args[4], "" + args[5], "" + args[6], "" + args[7], "" + args[8], "" + args[9], "" + args[10], "" + args[11], "" + args[12], "" + args[13], "" + args[14], "" + args[15], "" + args[16]);
+                        dt.Rows.Add("" + args[1], "" + args[2], "" + args[3], "" + args[4], "" + args[5], "" + args[6], "" + args[7], "" + args[8], "" + args[9], "" + args[10], "" + args[11], "" + args[12], "" + args[13], "" + args[14], "" + args[15], "" + args[16]);                      
+                        String[] meh = args[13].Split(':');
+                        String[] meh2 = meh[1].Split('"');
+                        String[] la = args[5].Split(':');
+                        String[] la2 = la[1].Split('"');
+                        String[] lo = args[6].Split(':');
+                        String[] lo2 = lo[1].Split('"');
+                        String[] de = args[6].Split(':');
+                        String[] de2 = de[1].Split('"');
+                        String[] f = args[1].Split(':');
+                        String[] f2 = f[1].Split('"');
+                        if (meh2[1].Equals("PM10") || meh2[1].Equals("PM2.5"))
+                        {
+                            Console.WriteLine("Entro");
+                            latitudes.Add(Convert.ToDouble(la2[1]));
+                            longitudes.Add(Convert.ToDouble(lo2[1]));
+                            departamentos.Add(de2[1]);
+                            tipoVariable.Add(meh2[1]);
+                            fechas.Add(f2[1]);
+                            Console.WriteLine(latitudes.Count);
+                        }
+                        else
+                        {
+                            Console.WriteLine("puta md");
+                        }                     
                         count++;
                     }
                     reader.Close();
@@ -233,7 +261,8 @@ namespace Interfaz
 
         private void map_Click(object sender, EventArgs e)
         {
-            Form map = new map();
+            map map = new map();
+            map.getData(fechas,tipoVariable,latitudes,longitudes,departamentos);
             map.Show();
         }
     }
