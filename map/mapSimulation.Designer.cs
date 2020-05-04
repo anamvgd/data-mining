@@ -1,6 +1,6 @@
 ﻿namespace map
 {
-    partial class Form1
+    partial class mapSimulation
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mapSimulation));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();

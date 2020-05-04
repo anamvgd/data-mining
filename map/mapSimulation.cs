@@ -14,9 +14,9 @@ using GMap.NET.WindowsForms.Markers;
 
 namespace map
 {
-    public partial class Form1 : Form
+    public partial class mapSimulation : Form
     {
-        public Form1()
+        public mapSimulation()
         {
             InitializeComponent();
         }
