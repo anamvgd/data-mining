@@ -18,6 +18,7 @@ namespace Interfaz
     {
         private List<Double> latitudes;
         private List<Double> longitudes;
+        private List<Double> values;
         private List<String> departamentos;
         private List<String> fechas;
         private List<String> tipoVariable;
@@ -26,21 +27,52 @@ namespace Interfaz
             InitializeComponent();
         }
 
-        public void getData(List<string> f, List<string> t, List<Double> la, List<Double> lo, List<string> d)
+        public void getData(List<string> f, List<string> t, List<Double> la, List<Double> lo, List<string> d,List<Double> v)
         {
             fechas = f;
             departamentos = d;
             tipoVariable = t;
             latitudes = la;
             longitudes = lo;
-            if (fechas[0]==null)
+            values = v;
+
+        }
+        
+        public void markers()
+        {
+            GMapOverlay markeroverley = new GMapOverlay("markers");
+            GMarkerGoogle marker1 = new GMarkerGoogle(new PointLatLng(4.6097100, -74.0817500), GMarkerGoogleType.yellow);
+            markeroverley.Markers.Add(marker1);
+            for (int i=0; i<values.Count;i++)
             {
-                Console.WriteLine("no sirvio");
+                GMarkerGoogle marker;
+                if (values[i]<=50)
+                {
+                   marker = new GMarkerGoogle(new PointLatLng(latitudes[i],longitudes[i]),GMarkerGoogleType.green) ;
+                }else if (values[i] >= 51 && values[i] <= 100)
+                {
+                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.yellow);
+                }else if (values[i] >= 101 && values[i] <= 150)
+                {
+                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.orange);
+                }else if (values[i] >= 151 && values[i] <= 200)
+                {
+                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.red);
+                }else if (values[i] >= 201 && values[i] <= 250)
+                {
+                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.purple);
+                }
+                else
+                {
+                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.brown_small);
+                }
+                markeroverley.Markers.Add(marker);
+                gmap.Overlays.Add(markeroverley);
+                gmap.Position = new GMap.NET.PointLatLng(latitudes[i], longitudes[i]);
+                gmap.Zoom = gmap.Zoom + 1;
+                gmap.Zoom = gmap.Zoom - 1;
             }
-            else
-            {
-                Console.WriteLine("Nice");
-            }
+
         }
 
         private void map_Load(object sender, EventArgs e)
@@ -50,14 +82,14 @@ namespace Interfaz
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            markers();
         }
 
         private void gmap_Load(object sender, EventArgs e)
         {
             gmap.DragButton = MouseButtons.Left;
             gmap.CanDragMap = true;
-            gmap.MapProvider = GMap.NET.MapProviders.GoogleTerrainMapProvider.Instance;
+            gmap.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
             GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerAndCache;
             gmap.Position = new GMap.NET.PointLatLng(4.6097100, -74.0817500);
             gmap.MinZoom = 0;

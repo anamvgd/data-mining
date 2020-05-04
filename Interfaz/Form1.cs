@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace Interfaz
         private String addLink;
         private List<Double> latitudes= new List<Double>();
         private List<Double> longitudes = new List<Double>();
+        private List<Double> values = new List<Double>();
         private List<String> departamentos = new List<string>();
         private List<String> fechas = new List<string>();
         private List<String> tipoVariable = new List<string>();
@@ -162,22 +164,25 @@ namespace Interfaz
                         String[] de2 = de[1].Split('"');
                         String[] f = args[1].Split(':');
                         String[] f2 = f[1].Split('"');
+                        String[] v = args[15].Split(':');
+                        String[] v2 = v[1].Split('"');
                         if (meh2[1].Equals("PM10") || meh2[1].Equals("PM2.5"))
                         {
-                            Console.WriteLine("Entro");
-                            latitudes.Add(Convert.ToDouble(la2[1]));
-                            longitudes.Add(Convert.ToDouble(lo2[1]));
+                            CultureInfo culture = new CultureInfo("en-US");
+                            latitudes.Add(Convert.ToDouble(la2[1],culture));
+                            longitudes.Add(Convert.ToDouble(lo2[1],culture));
                             departamentos.Add(de2[1]);
                             tipoVariable.Add(meh2[1]);
                             fechas.Add(f2[1]);
-                            Console.WriteLine(latitudes.Count);
+                            values.Add(Convert.ToDouble(v2[1],culture));
                         }
                         else
                         {
-                            Console.WriteLine("puta md");
+                            Console.WriteLine("F");
                         }                     
                         count++;
                     }
+                    Console.WriteLine(count);
                     reader.Close();
                     stream.Close();
                 }
@@ -262,7 +267,7 @@ namespace Interfaz
         private void map_Click(object sender, EventArgs e)
         {
             map map = new map();
-            map.getData(fechas,tipoVariable,latitudes,longitudes,departamentos);
+            map.getData(fechas,tipoVariable,latitudes,longitudes,departamentos,values);
             map.Show();
         }
     }
