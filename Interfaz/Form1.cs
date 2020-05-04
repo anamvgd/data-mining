@@ -219,6 +219,11 @@ namespace Interfaz
               dataGridView.Rows.Clear();
 
         }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
       
