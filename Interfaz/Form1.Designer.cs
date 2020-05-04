@@ -46,13 +46,14 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.map = new System.Windows.Forms.Button();
+            this.prediction = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelURL
@@ -220,25 +221,15 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.dataGridView1);
+            this.groupBox5.Controls.Add(this.prediction);
+            this.groupBox5.Controls.Add(this.map);
+            this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Location = new System.Drawing.Point(424, 261);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(374, 262);
+            this.groupBox5.Size = new System.Drawing.Size(442, 262);
             this.groupBox5.TabIndex = 50;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Informacion";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(334, 214);
-            this.dataGridView1.TabIndex = 0;
             // 
             // deleteButton
             // 
@@ -249,6 +240,35 @@
             this.deleteButton.Text = "Eliminar filtros";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(283, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "A continuación, seleccione la opción que desee visualizar:";
+            // 
+            // map
+            // 
+            this.map.Location = new System.Drawing.Point(120, 80);
+            this.map.Name = "map";
+            this.map.Size = new System.Drawing.Size(235, 45);
+            this.map.TabIndex = 1;
+            this.map.Text = "Mapa de niveles de contaminación";
+            this.map.UseVisualStyleBackColor = true;
+            this.map.Click += new System.EventHandler(this.map_Click);
+            // 
+            // prediction
+            // 
+            this.prediction.Location = new System.Drawing.Point(123, 160);
+            this.prediction.Name = "prediction";
+            this.prediction.Size = new System.Drawing.Size(216, 48);
+            this.prediction.TabIndex = 2;
+            this.prediction.Text = "Predicciones sobre niveles de contaminación";
+            this.prediction.UseVisualStyleBackColor = true;
+            this.prediction.Click += new System.EventHandler(this.prediction_Click);
             // 
             // Form1
             // 
@@ -274,7 +294,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,9 +318,11 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button prediction;
+        private System.Windows.Forms.Button map;
+        private System.Windows.Forms.Label label2;
     }
 }
 

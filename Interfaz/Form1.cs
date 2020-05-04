@@ -178,7 +178,7 @@ namespace Interfaz
                 dt.Rows.Add(r);
                 */
             }
-            dataGridView1.DataSource = dt;
+            dataGridView.DataSource = dt;
             dt.Rows.Add("a", "b");
 
         }
@@ -223,6 +223,18 @@ namespace Interfaz
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void prediction_Click(object sender, EventArgs e)
+        {
+            Form predictions = new Form2();
+            predictions.Show();
+        }
+
+        private void map_Click(object sender, EventArgs e)
+        {
+            Form map = new map();
+            map.Show();
         }
     }
 
