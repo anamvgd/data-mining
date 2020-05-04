@@ -26,5 +26,10 @@ namespace Interfaz
         {
 
         }
+
+        private void gmap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
