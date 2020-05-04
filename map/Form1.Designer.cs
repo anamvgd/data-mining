@@ -32,10 +32,10 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.department = new System.Windows.Forms.ComboBox();
+            this.kindParticle = new System.Windows.Forms.ComboBox();
+            this.dStart = new System.Windows.Forms.ComboBox();
+            this.dEnd = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -71,10 +71,10 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.dEnd);
+            this.groupBox1.Controls.Add(this.dStart);
+            this.groupBox1.Controls.Add(this.kindParticle);
+            this.groupBox1.Controls.Add(this.department);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(257, 473);
@@ -83,41 +83,42 @@
             this.groupBox1.Text = "Configuracion";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // comboBox2
+            // department
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(6, 35);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(228, 21);
-            this.comboBox2.TabIndex = 0;
-            this.comboBox2.Text = "Department";
+            this.department.FormattingEnabled = true;
+            this.department.Location = new System.Drawing.Point(6, 35);
+            this.department.Name = "department";
+            this.department.Size = new System.Drawing.Size(228, 21);
+            this.department.TabIndex = 0;
+            this.department.Text = "Department";
             // 
-            // comboBox3
+            // kindParticle
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(6, 92);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(228, 21);
-            this.comboBox3.TabIndex = 1;
-            this.comboBox3.Text = "Kind of particle";
+            this.kindParticle.FormattingEnabled = true;
+            this.kindParticle.Location = new System.Drawing.Point(6, 92);
+            this.kindParticle.Name = "kindParticle";
+            this.kindParticle.Size = new System.Drawing.Size(228, 21);
+            this.kindParticle.TabIndex = 1;
+            this.kindParticle.Text = "Kind of particle";
             // 
-            // comboBox4
+            // dStart
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(6, 142);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(228, 21);
-            this.comboBox4.TabIndex = 2;
-            this.comboBox4.Text = "Date start";
+            this.dStart.FormattingEnabled = true;
+            this.dStart.Location = new System.Drawing.Point(6, 142);
+            this.dStart.Name = "dStart";
+            this.dStart.Size = new System.Drawing.Size(228, 21);
+            this.dStart.TabIndex = 2;
+            this.dStart.Text = "Date start";
+            this.dStart.MouseCaptureChanged += new System.EventHandler(this.dateStartChoice);
             // 
-            // comboBox5
+            // dEnd
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(6, 192);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(227, 21);
-            this.comboBox5.TabIndex = 3;
-            this.comboBox5.Text = "Date finish";
+            this.dEnd.FormattingEnabled = true;
+            this.dEnd.Location = new System.Drawing.Point(6, 192);
+            this.dEnd.Name = "dEnd";
+            this.dEnd.Size = new System.Drawing.Size(227, 21);
+            this.dEnd.TabIndex = 3;
+            this.dEnd.Text = "Date finish";
             // 
             // button1
             // 
@@ -127,6 +128,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -149,10 +151,10 @@
         private GMap.NET.WindowsForms.GMapControl gmap;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox dEnd;
+        private System.Windows.Forms.ComboBox dStart;
+        private System.Windows.Forms.ComboBox kindParticle;
+        private System.Windows.Forms.ComboBox department;
     }
 }
 
