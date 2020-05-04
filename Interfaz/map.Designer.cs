@@ -33,19 +33,19 @@
             this.buttonGo = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
-            this.comboDepartmen = new System.Windows.Forms.ComboBox();
             this.comboDateFinish = new System.Windows.Forms.ComboBox();
             this.comboDateStart = new System.Windows.Forms.ComboBox();
             this.comboParticle = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.comboParticle);
             this.groupBox1.Controls.Add(this.comboDateStart);
             this.groupBox1.Controls.Add(this.comboDateFinish);
-            this.groupBox1.Controls.Add(this.comboDepartmen);
             this.groupBox1.Controls.Add(this.buttonGo);
             this.groupBox1.Location = new System.Drawing.Point(24, 13);
             this.groupBox1.Name = "groupBox1";
@@ -91,15 +91,6 @@
             this.gmap.Zoom = 0D;
             this.gmap.Load += new System.EventHandler(this.gmap_Load);
             // 
-            // comboDepartmen
-            // 
-            this.comboDepartmen.FormattingEnabled = true;
-            this.comboDepartmen.Location = new System.Drawing.Point(6, 37);
-            this.comboDepartmen.Name = "comboDepartmen";
-            this.comboDepartmen.Size = new System.Drawing.Size(255, 21);
-            this.comboDepartmen.TabIndex = 1;
-            this.comboDepartmen.Text = "Department";
-            // 
             // comboDateFinish
             // 
             this.comboDateFinish.FormattingEnabled = true;
@@ -121,11 +112,22 @@
             // comboParticle
             // 
             this.comboParticle.FormattingEnabled = true;
+            this.comboParticle.Items.AddRange(new object[] {
+            "PM10",
+            "PM2.5"});
             this.comboParticle.Location = new System.Drawing.Point(6, 88);
             this.comboParticle.Name = "comboParticle";
             this.comboParticle.Size = new System.Drawing.Size(255, 21);
             this.comboParticle.TabIndex = 4;
             this.comboParticle.Text = "Kind of particle";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(255, 20);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "Department";
             // 
             // map
             // 
@@ -140,6 +142,7 @@
             this.Text = "map";
             this.Load += new System.EventHandler(this.map_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -153,6 +156,6 @@
         private System.Windows.Forms.ComboBox comboParticle;
         private System.Windows.Forms.ComboBox comboDateStart;
         private System.Windows.Forms.ComboBox comboDateFinish;
-        private System.Windows.Forms.ComboBox comboDepartmen;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

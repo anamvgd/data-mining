@@ -41,23 +41,21 @@ namespace Interfaz
         public void markers()
         {
             GMapOverlay markeroverley = new GMapOverlay("markers");
-            GMarkerGoogle marker1 = new GMarkerGoogle(new PointLatLng(4.6097100, -74.0817500), GMarkerGoogleType.yellow);
-            markeroverley.Markers.Add(marker1);
             for (int i=0; i<values.Count;i++)
             {
                 GMarkerGoogle marker;
                 if (values[i]<=50)
                 {
-                   marker = new GMarkerGoogle(new PointLatLng(latitudes[i],longitudes[i]),GMarkerGoogleType.green) ;
+                   marker = new GMarkerGoogle(new PointLatLng(latitudes[i],longitudes[i]),GMarkerGoogleType.green_big_go) ;
                 }else if (values[i] >= 51 && values[i] <= 100)
                 {
-                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.yellow);
+                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.yellow_big_pause);
                 }else if (values[i] >= 101 && values[i] <= 150)
                 {
-                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.orange);
+                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.orange_dot);
                 }else if (values[i] >= 151 && values[i] <= 200)
                 {
-                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.red);
+                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.red_big_stop);
                 }else if (values[i] >= 201 && values[i] <= 250)
                 {
                     marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.purple);
