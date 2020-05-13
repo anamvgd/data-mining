@@ -27,7 +27,7 @@ namespace Interfaz
             InitializeComponent();
         }
 
-        public void getData(List<string> f, List<string> t, List<Double> la, List<Double> lo, List<string> d,List<Double> v)
+        public void getData(List<string> f, List<string> t, List<Double> la, List<Double> lo, List<string> d, List<Double> v)
         {
             fechas = f;
             departamentos = d;
@@ -37,26 +37,30 @@ namespace Interfaz
             values = v;
 
         }
-        
+
         public void markers()
         {
             GMapOverlay markeroverley = new GMapOverlay("markers");
-            for (int i=0; i<values.Count;i++)
+            for (int i = 0; i < values.Count; i++)
             {
                 GMarkerGoogle marker;
-                if (values[i]<=50)
+                if (values[i] <= 50)
                 {
-                   marker = new GMarkerGoogle(new PointLatLng(latitudes[i],longitudes[i]),GMarkerGoogleType.green_big_go) ;
-                }else if (values[i] >= 51 && values[i] <= 100)
+                    marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.green_big_go);
+                }
+                else if (values[i] >= 51 && values[i] <= 100)
                 {
                     marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.yellow_big_pause);
-                }else if (values[i] >= 101 && values[i] <= 150)
+                }
+                else if (values[i] >= 101 && values[i] <= 150)
                 {
                     marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.orange_dot);
-                }else if (values[i] >= 151 && values[i] <= 200)
+                }
+                else if (values[i] >= 151 && values[i] <= 200)
                 {
                     marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.red_big_stop);
-                }else if (values[i] >= 201 && values[i] <= 250)
+                }
+                else if (values[i] >= 201 && values[i] <= 250)
                 {
                     marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.purple);
                 }
@@ -97,3 +101,4 @@ namespace Interfaz
         }
     }
 }
+
