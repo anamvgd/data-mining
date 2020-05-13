@@ -73,7 +73,7 @@ namespace GUI
             comboBoxData.Hide();
             dataFilter.Hide();
             filterAdded.Hide();
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -82,11 +82,6 @@ namespace GUI
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -144,7 +139,6 @@ namespace GUI
 
         }
 
-
         private void searchData(object sender, EventArgs e)
         {
             /*
@@ -152,6 +146,6 @@ namespace GUI
              no se si deseas crear una nueva ventana o ocultar todo y trabajar
              en la misma pero solamente cuando le unda aqui ya muestre los datos
              */
-        }
+       }
     }
 }
