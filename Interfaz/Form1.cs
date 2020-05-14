@@ -12,6 +12,9 @@ namespace Interfaz
 {
     public partial class Form1 : Form
     {
+        private double rsquared;
+        private double yintercept;
+        private double slope;
         DataTable dt;
         private String url;
         private String addLink;
@@ -20,6 +23,7 @@ namespace Interfaz
         private List<Double> values = new List<Double>();
         private List<String> departamentos = new List<string>();
         private List<String> fechas = new List<string>();
+        private List<Double> fechasNumbers = new List<double>();
         private List<String> tipoVariable = new List<string>();
         public static String FILTER1 = "?source=";
         public static String FILTER2 = "?$select";
@@ -27,6 +31,7 @@ namespace Interfaz
         public static String FILTER4 = "?$offset";
         public static String FILTER5 = "?$limit";
         public static String FILTER6 = "?$where";
+
         public Form1()
         {
             InitializeComponent();
@@ -174,6 +179,14 @@ namespace Interfaz
                             departamentos.Add(de2[1]);
                             tipoVariable.Add(meh2[1]);
                             fechas.Add(f2[1]);
+
+                            String[] fechaSinHora = f2[1].Split(' ');
+                            fechaSinHora = fechaSinHora[0].Split('/');
+                            double dias = Convert.ToDouble(fechaSinHora[0],culture);
+                            double meses = (Convert.ToDouble(fechaSinHora[1],culture) *30);
+                            double años = (Convert.ToDouble(fechaSinHora[2],culture) * 30 * 12);
+                            fechasNumbers.Add(dias + meses + años);
+
                             values.Add(Convert.ToDouble(v2[1],culture));
                         }
                         else
@@ -260,8 +273,50 @@ namespace Interfaz
 
         private void prediction_Click(object sender, EventArgs e)
         {
+            linearRegression(fechasNumbers, values, out rsquared, out yintercept, out slope);
             Form predictions = new Form2();
             predictions.Show();
+        }
+
+        public static void linearRegression(List<Double> xVals, List<Double> yVals,
+                                        out double rsquared, out double yintercept,
+                                        out double slope)
+        {
+            //Debug.Assert(xVals.Length == yVals.Length);
+            double sumOfX = 0;
+            double sumOfY = 0;
+            double sumOfXSq = 0;
+            double sumOfYSq = 0;
+            double ssX = 0;
+            double ssY = 0;
+            double sumCodeviates = 0;
+            double sCo = 0;
+            double count = 0;
+
+            for (int ctr = 0; ctr < xVals.Count; ctr++)
+            {
+                double x = xVals[ctr];
+                double y = yVals[ctr];
+                sumCodeviates += x * y;
+                sumOfX += x;
+                sumOfY += y;
+                sumOfXSq += x * x;
+                sumOfYSq += y * y;
+                count++;
+            }
+            ssX = sumOfXSq - ((sumOfX * sumOfX) / count);
+            ssY = sumOfYSq - ((sumOfY * sumOfY) / count);
+            double RNumerator = (count * sumCodeviates) - (sumOfX * sumOfY);
+            double RDenom = (count * sumOfXSq - (sumOfX * sumOfX))
+             * (count * sumOfYSq - (sumOfY * sumOfY));
+            sCo = sumCodeviates - ((sumOfX * sumOfY) / count);
+
+            double meanX = sumOfX / count;
+            double meanY = sumOfY / count;
+            double dblR = RNumerator / Math.Sqrt(RDenom);
+            rsquared = dblR * dblR;
+            yintercept = meanY - ((sCo / ssX) * meanX);
+            slope = sCo / ssX;
         }
 
         private void map_Click(object sender, EventArgs e)
