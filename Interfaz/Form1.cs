@@ -21,6 +21,7 @@ namespace Interfaz
         private List<Double> latitudes= new List<Double>();
         private List<Double> longitudes = new List<Double>();
         private List<Double> values = new List<Double>();
+        private List<Double> valuesPrediction = new List<double>();
         private List<String> departamentos = new List<string>();
         private List<String> fechas = new List<string>();
         private List<Double> fechasNumbers = new List<double>();
@@ -274,11 +275,12 @@ namespace Interfaz
         private void prediction_Click(object sender, EventArgs e)
         {
             linearRegression(fechasNumbers, values, out rsquared, out yintercept, out slope);
+            linearAplication(yintercept, slope);
             Form predictions = new Form2();
             predictions.Show();
         }
 
-        public static void linearRegression(List<Double> xVals, List<Double> yVals,
+        private void linearRegression(List<Double> xVals, List<Double> yVals,
                                         out double rsquared, out double yintercept,
                                         out double slope)
         {
@@ -317,6 +319,16 @@ namespace Interfaz
             rsquared = dblR * dblR;
             yintercept = meanY - ((sCo / ssX) * meanX);
             slope = sCo / ssX;
+        }
+
+        private void linearAplication(double yintercept, double slope) 
+        {
+            List<Double> valuesCalculated = new List<double>();
+            for (int i=0; i<fechasNumbers.Count; i++) 
+            {
+                valuesCalculated[i] = (fechasNumbers[i]*slope) + yintercept;
+            }
+            valuesPrediction = valuesCalculated;
         }
 
         private void map_Click(object sender, EventArgs e)
