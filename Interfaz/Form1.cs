@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Windows.Forms;
@@ -11,15 +12,27 @@ namespace Interfaz
 {
     public partial class Form1 : Form
     {
+        private double rsquared;
+        private double yintercept;
+        private double slope;
         DataTable dt;
         private String url;
         private String addLink;
+        private List<Double> latitudes= new List<Double>();
+        private List<Double> longitudes = new List<Double>();
+        private List<Double> values = new List<Double>();
+        private List<Double> valuesPrediction = new List<double>();
+        private List<String> departamentos = new List<string>();
+        private List<String> fechas = new List<string>();
+        private List<Double> fechasNumbers = new List<double>();
+        private List<String> tipoVariable = new List<string>();
         public static String FILTER1 = "?source=";
         public static String FILTER2 = "?$select";
         public static String FILTER3 = "?$order";
         public static String FILTER4 = "?$offset";
         public static String FILTER5 = "?$limit";
         public static String FILTER6 = "?$where";
+
         public Form1()
         {
             InitializeComponent();
@@ -136,7 +149,7 @@ namespace Interfaz
             {
 
                 //var url = "https://www.datos.gov.co/resource/ysq6-ri4e.json?nombre_del_municipio=BARBOSA&variable=PM2.5&$limit=10&$offset=20";
-                var url = "https://www.datos.gov.co/resource/" + bdId + ".json?" + addLink + "&$limit=10&$offset=20";
+                var url = "https://www.datos.gov.co/resource/" + bdId + ".json?" + addLink;
                 var client = new WebClient();
                 using (var stream = client.OpenRead(url))
                 using (var reader = new StreamReader(stream))
@@ -145,11 +158,45 @@ namespace Interfaz
                     int count = 0;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        Console.WriteLine("entro");
                         String[] args = line.Split(',');
-                        dt.Rows.Add("" + args[1], "" + args[2], "" + args[3], "" + args[4], "" + args[5], "" + args[6], "" + args[7], "" + args[8], "" + args[9], "" + args[10], "" + args[11], "" + args[12], "" + args[13], "" + args[14], "" + args[15], "" + args[16]);
+                        dt.Rows.Add("" + args[1], "" + args[2], "" + args[3], "" + args[4], "" + args[5], "" + args[6], "" + args[7], "" + args[8], "" + args[9], "" + args[10], "" + args[11], "" + args[12], "" + args[13], "" + args[14], "" + args[15], "" + args[16]);                      
+                        String[] meh = args[13].Split(':');
+                        String[] meh2 = meh[1].Split('"');
+                        String[] la = args[5].Split(':');
+                        String[] la2 = la[1].Split('"');
+                        String[] lo = args[6].Split(':');
+                        String[] lo2 = lo[1].Split('"');
+                        String[] de = args[6].Split(':');
+                        String[] de2 = de[1].Split('"');
+                        String[] f = args[1].Split(':');
+                        String[] f2 = f[1].Split('"');
+                        String[] v = args[15].Split(':');
+                        String[] v2 = v[1].Split('"');
+                        if (meh2[1].Equals("PM10") || meh2[1].Equals("PM2.5"))
+                        {
+                            CultureInfo culture = new CultureInfo("en-US");
+                            latitudes.Add(Convert.ToDouble(la2[1],culture));
+                            longitudes.Add(Convert.ToDouble(lo2[1],culture));
+                            departamentos.Add(de2[1]);
+                            tipoVariable.Add(meh2[1]);
+                            fechas.Add(f2[1]);
+
+                            String[] fechaSinHora = f2[1].Split(' ');
+                            fechaSinHora = fechaSinHora[0].Split('/');
+                            double dias = Convert.ToDouble(fechaSinHora[0],culture);
+                            double meses = (Convert.ToDouble(fechaSinHora[1],culture) *30);
+                            double años = (Convert.ToDouble(fechaSinHora[2],culture) * 30 * 12);
+                            fechasNumbers.Add(dias + meses + años);
+
+                            values.Add(Convert.ToDouble(v2[1],culture));
+                        }
+                        else
+                        {
+                            Console.WriteLine("F");
+                        }                     
                         count++;
                     }
+                    Console.WriteLine(count);
                     reader.Close();
                     stream.Close();
                 }
@@ -178,7 +225,7 @@ namespace Interfaz
                 dt.Rows.Add(r);
                 */
             }
-            dataGridView1.DataSource = dt;
+            dataGridView.DataSource = dt;
             dt.Rows.Add("a", "b");
 
         }
@@ -223,6 +270,72 @@ namespace Interfaz
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void prediction_Click(object sender, EventArgs e)
+        {
+            linearRegression(fechasNumbers, values, out rsquared, out yintercept, out slope);
+            linearAplication(yintercept, slope);
+            Form predictions = new Form2();
+            predictions.Show();
+        }
+
+        private void linearRegression(List<Double> xVals, List<Double> yVals,
+                                        out double rsquared, out double yintercept,
+                                        out double slope)
+        {
+            //Debug.Assert(xVals.Length == yVals.Length);
+            double sumOfX = 0;
+            double sumOfY = 0;
+            double sumOfXSq = 0;
+            double sumOfYSq = 0;
+            double ssX = 0;
+            double ssY = 0;
+            double sumCodeviates = 0;
+            double sCo = 0;
+            double count = 0;
+
+            for (int ctr = 0; ctr < xVals.Count; ctr++)
+            {
+                double x = xVals[ctr];
+                double y = yVals[ctr];
+                sumCodeviates += x * y;
+                sumOfX += x;
+                sumOfY += y;
+                sumOfXSq += x * x;
+                sumOfYSq += y * y;
+                count++;
+            }
+            ssX = sumOfXSq - ((sumOfX * sumOfX) / count);
+            ssY = sumOfYSq - ((sumOfY * sumOfY) / count);
+            double RNumerator = (count * sumCodeviates) - (sumOfX * sumOfY);
+            double RDenom = (count * sumOfXSq - (sumOfX * sumOfX))
+             * (count * sumOfYSq - (sumOfY * sumOfY));
+            sCo = sumCodeviates - ((sumOfX * sumOfY) / count);
+
+            double meanX = sumOfX / count;
+            double meanY = sumOfY / count;
+            double dblR = RNumerator / Math.Sqrt(RDenom);
+            rsquared = dblR * dblR;
+            yintercept = meanY - ((sCo / ssX) * meanX);
+            slope = sCo / ssX;
+        }
+
+        private void linearAplication(double yintercept, double slope) 
+        {
+            List<Double> valuesCalculated = new List<double>();
+            for (int i=0; i<fechasNumbers.Count; i++) 
+            {
+                valuesCalculated[i] = (fechasNumbers[i]*slope) + yintercept;
+            }
+            valuesPrediction = valuesCalculated;
+        }
+
+        private void map_Click(object sender, EventArgs e)
+        {
+            map map = new map();
+            map.getData(fechas,tipoVariable,latitudes,longitudes,departamentos,values);
+            map.Show();
         }
     }
 

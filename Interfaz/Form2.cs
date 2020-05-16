@@ -112,5 +112,10 @@ namespace Interfaz
             chart1.Series.Add(serie);
             chart1.DataSource = dt;
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
