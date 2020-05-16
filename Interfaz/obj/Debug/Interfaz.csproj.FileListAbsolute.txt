@@ -151,3 +151,15 @@ C:\Users\crisc\OneDrive\Documentos\GitHub\data-mining\Interfaz\obj\Debug\Interfa
 C:\Users\crisc\OneDrive\Documentos\GitHub\data-mining\Interfaz\obj\Debug\Interfaz.csproj.CopyComplete
 C:\Users\crisc\OneDrive\Documentos\GitHub\data-mining\Interfaz\obj\Debug\Interfaz.exe
 C:\Users\crisc\OneDrive\Documentos\GitHub\data-mining\Interfaz\obj\Debug\Interfaz.pdb
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\EntityFramework.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\GMap.NET.Core.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\System.Data.SQLite.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\EntityFramework.xml
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\System.Data.SQLite.xml
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\jdjim\Documents\Proyectos U\data-mining\Interfaz\obj\Debug\Interfaz.map.resources

@@ -18,7 +18,7 @@ namespace Interfaz
         DataTable dt;
         private String url;
         private String addLink;
-        private List<Double> latitudes= new List<Double>();
+        private List<Double> latitudes = new List<Double>();
         private List<Double> longitudes = new List<Double>();
         private List<Double> values = new List<Double>();
         private List<Double> valuesPrediction = new List<double>();
@@ -159,7 +159,7 @@ namespace Interfaz
                     while ((line = reader.ReadLine()) != null)
                     {
                         String[] args = line.Split(',');
-                        dt.Rows.Add("" + args[1], "" + args[2], "" + args[3], "" + args[4], "" + args[5], "" + args[6], "" + args[7], "" + args[8], "" + args[9], "" + args[10], "" + args[11], "" + args[12], "" + args[13], "" + args[14], "" + args[15], "" + args[16]);                      
+                        dt.Rows.Add("" + args[1], "" + args[2], "" + args[3], "" + args[4], "" + args[5], "" + args[6], "" + args[7], "" + args[8], "" + args[9], "" + args[10], "" + args[11], "" + args[12], "" + args[13], "" + args[14], "" + args[15], "" + args[16]);
                         String[] meh = args[13].Split(':');
                         String[] meh2 = meh[1].Split('"');
                         String[] la = args[5].Split(':');
@@ -175,25 +175,25 @@ namespace Interfaz
                         if (meh2[1].Equals("PM10") || meh2[1].Equals("PM2.5"))
                         {
                             CultureInfo culture = new CultureInfo("en-US");
-                            latitudes.Add(Convert.ToDouble(la2[1],culture));
-                            longitudes.Add(Convert.ToDouble(lo2[1],culture));
+                            latitudes.Add(Convert.ToDouble(la2[1], culture));
+                            longitudes.Add(Convert.ToDouble(lo2[1], culture));
                             departamentos.Add(de2[1]);
                             tipoVariable.Add(meh2[1]);
                             fechas.Add(f2[1]);
 
                             String[] fechaSinHora = f2[1].Split(' ');
                             fechaSinHora = fechaSinHora[0].Split('/');
-                            double dias = Convert.ToDouble(fechaSinHora[0],culture);
-                            double meses = (Convert.ToDouble(fechaSinHora[1],culture) *30);
-                            double años = (Convert.ToDouble(fechaSinHora[2],culture) * 30 * 12);
+                            double dias = Convert.ToDouble(fechaSinHora[0], culture);
+                            double meses = (Convert.ToDouble(fechaSinHora[1], culture) * 30);
+                            double años = (Convert.ToDouble(fechaSinHora[2], culture) * 30 * 12);
                             fechasNumbers.Add(dias + meses + años);
 
-                            values.Add(Convert.ToDouble(v2[1],culture));
+                            values.Add(Convert.ToDouble(v2[1], culture));
                         }
                         else
                         {
                             Console.WriteLine("F");
-                        }                     
+                        }
                         count++;
                     }
                     Console.WriteLine(count);
@@ -262,8 +262,8 @@ namespace Interfaz
 
         private void button2_Click(object sender, EventArgs e)
         {
-              filters.Text = "Sin filtros";
-              dataGridView.Rows.Clear();
+            filters.Text = "Sin filtros";
+            dataGridView.Rows.Clear();
 
         }
 
@@ -276,7 +276,8 @@ namespace Interfaz
         {
             linearRegression(fechasNumbers, values, out rsquared, out yintercept, out slope);
             linearAplication(yintercept, slope);
-            Form predictions = new Form2();
+            Form2 predictions = new Form2();
+            predictions.graficarPredicciones(valuesPrediction, fechasNumbers);
             predictions.Show();
         }
 
@@ -321,15 +322,17 @@ namespace Interfaz
             slope = sCo / ssX;
         }
 
-        private void linearAplication(double yintercept, double slope) 
+        private void linearAplication(double yintercept, double slope)
         {
             List<Double> valuesCalculated = new List<double>();
-            for (int i=0; i<fechasNumbers.Count; i++) 
+            for (int i = 0; i < fechasNumbers.Count; i++)
             {
-                valuesCalculated[i] = (fechasNumbers[i]*slope) + yintercept;
+                valuesCalculated[i] = (fechasNumbers[i] * slope) + yintercept;
             }
             valuesPrediction = valuesCalculated;
         }
+
+      
 
         private void map_Click(object sender, EventArgs e)
         {
