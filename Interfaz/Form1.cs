@@ -327,7 +327,7 @@ namespace Interfaz
             List<Double> valuesCalculated = new List<double>();
             for (int i = 0; i < fechasNumbers.Count; i++)
             {
-                valuesCalculated[i] = (fechasNumbers[i] * slope) + yintercept;
+                valuesCalculated.Add((fechasNumbers[i] * slope) + yintercept);
             }
             valuesPrediction = valuesCalculated;
         }
