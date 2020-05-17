@@ -17,6 +17,9 @@ namespace Interfaz
     public partial class Form2 : Form
     {
         DataTable dt;
+        List<double> xmembers;
+        List<double> ymembers;
+
         public Form2()
         {
             InitializeComponent();
@@ -118,6 +121,8 @@ namespace Interfaz
 
         public void graficarPredicciones(List<double> valuesY, List<double> valuesX) {
 
+            xmembers = valuesX;
+            ymembers = valuesY;
             dt = new DataTable();
             dt.Columns.Add(new DataColumn("Prediccion", typeof(String)));
             dt.Columns.Add(new DataColumn("Tiempo", typeof(String)));
@@ -133,8 +138,8 @@ namespace Interfaz
             chart1.ChartAreas.Add(areagrafico);
             Series serie = new Series("Predicciones");
             serie.ChartType = SeriesChartType.Point;
-            serie.XValueMember = "Prediccion";
-            serie.YValueMembers = "Tiempo";
+            serie.YValueMembers = "Prediccion";
+            serie.XValueMember = "Tiempo";
             serie.IsValueShownAsLabel = true;
             chart1.Series.Add(serie);
             chart1.DataSource = dt;
@@ -144,6 +149,11 @@ namespace Interfaz
         private void back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            graficarPredicciones(ymembers,xmembers);
         }
     }
 }
