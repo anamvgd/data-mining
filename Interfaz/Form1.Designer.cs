@@ -45,15 +45,16 @@
             this.comboDatoS = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.beforeButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.prediction = new System.Windows.Forms.Button();
             this.map = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.nextButton = new System.Windows.Forms.Button();
-            this.beforeButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -62,9 +63,11 @@
             // labelURL
             // 
             this.labelURL.AutoSize = true;
-            this.labelURL.Location = new System.Drawing.Point(37, 70);
+            this.labelURL.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelURL.ForeColor = System.Drawing.Color.White;
+            this.labelURL.Location = new System.Drawing.Point(9, 20);
             this.labelURL.Name = "labelURL";
-            this.labelURL.Size = new System.Drawing.Size(86, 13);
+            this.labelURL.Size = new System.Drawing.Size(103, 13);
             this.labelURL.TabIndex = 1;
             this.labelURL.Text = "Id base de datos";
             // 
@@ -172,6 +175,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelURL);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(355, 100);
@@ -206,12 +211,15 @@
             // 
             // addButton
             // 
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(7)))));
+            this.addButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addButton.Location = new System.Drawing.Point(317, 43);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 46;
             this.addButton.Text = "Agregar";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // groupBox4
@@ -220,12 +228,43 @@
             this.groupBox4.Controls.Add(this.beforeButton);
             this.groupBox4.Controls.Add(this.nextButton);
             this.groupBox4.Controls.Add(this.dataGridView);
+            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(424, 35);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(484, 228);
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(319, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Page";
+            // 
+            // beforeButton
+            // 
+            this.beforeButton.Location = new System.Drawing.Point(371, 199);
+            this.beforeButton.Name = "beforeButton";
+            this.beforeButton.Size = new System.Drawing.Size(41, 24);
+            this.beforeButton.TabIndex = 48;
+            this.beforeButton.Text = "<";
+            this.beforeButton.UseVisualStyleBackColor = true;
+            this.beforeButton.Click += new System.EventHandler(this.beforeButton_Click);
+            // 
+            // nextButton
+            // 
+            this.nextButton.Location = new System.Drawing.Point(421, 199);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(39, 24);
+            this.nextButton.TabIndex = 47;
+            this.nextButton.Text = ">";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // groupBox5
             // 
@@ -278,40 +317,13 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // nextButton
-            // 
-            this.nextButton.Location = new System.Drawing.Point(421, 199);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(39, 24);
-            this.nextButton.TabIndex = 47;
-            this.nextButton.Text = ">";
-            this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
-            // 
-            // beforeButton
-            // 
-            this.beforeButton.Location = new System.Drawing.Point(371, 199);
-            this.beforeButton.Name = "beforeButton";
-            this.beforeButton.Size = new System.Drawing.Size(41, 24);
-            this.beforeButton.TabIndex = 48;
-            this.beforeButton.Text = "<";
-            this.beforeButton.UseVisualStyleBackColor = true;
-            this.beforeButton.Click += new System.EventHandler(this.beforeButton_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(319, 202);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Page";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(130)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(920, 575);
+            this.ControlBox = false;
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -321,12 +333,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.urlText);
             this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.labelURL);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Buscador";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
