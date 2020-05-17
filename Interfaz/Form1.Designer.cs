@@ -42,14 +42,14 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboDatoS = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.map = new System.Windows.Forms.Button();
             this.prediction = new System.Windows.Forms.Button();
+            this.map = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.deleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -116,6 +116,7 @@
             this.comboBoxFilters.Name = "comboBoxFilters";
             this.comboBoxFilters.Size = new System.Drawing.Size(200, 21);
             this.comboBoxFilters.TabIndex = 40;
+            this.comboBoxFilters.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilters_SelectedIndexChanged);
             // 
             // filterAdded
             // 
@@ -165,7 +166,6 @@
             this.dataGridView.Size = new System.Drawing.Size(458, 169);
             this.dataGridView.TabIndex = 46;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
-            this.dataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.selectCase);
             // 
             // groupBox1
             // 
@@ -178,8 +178,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.comboDatoS);
             this.groupBox3.Controls.Add(this.addButton);
-            this.groupBox3.Controls.Add(this.textBoxSearch);
             this.groupBox3.Controls.Add(this.filters);
             this.groupBox3.Controls.Add(this.dataFilter);
             this.groupBox3.Controls.Add(this.filterAdded);
@@ -192,22 +192,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search";
             // 
+            // comboDatoS
+            // 
+            this.comboDatoS.FormattingEnabled = true;
+            this.comboDatoS.Location = new System.Drawing.Point(111, 59);
+            this.comboDatoS.Name = "comboDatoS";
+            this.comboDatoS.Size = new System.Drawing.Size(200, 21);
+            this.comboDatoS.TabIndex = 47;
+            this.comboDatoS.SelectedIndexChanged += new System.EventHandler(this.comboDatoS_SelectedIndexChanged);
+            // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(317, 60);
+            this.addButton.Location = new System.Drawing.Point(317, 43);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 46;
             this.addButton.Text = "Agregar";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(111, 62);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(200, 20);
-            this.textBoxSearch.TabIndex = 45;
             // 
             // groupBox4
             // 
@@ -231,24 +233,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Informacion";
             // 
-            // deleteButton
+            // prediction
             // 
-            this.deleteButton.Location = new System.Drawing.Point(229, 447);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(109, 23);
-            this.deleteButton.TabIndex = 51;
-            this.deleteButton.Text = "Eliminar filtros";
-            this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "A continuación, seleccione la opción que desee visualizar:";
+            this.prediction.Location = new System.Drawing.Point(123, 160);
+            this.prediction.Name = "prediction";
+            this.prediction.Size = new System.Drawing.Size(216, 48);
+            this.prediction.TabIndex = 2;
+            this.prediction.Text = "Predicciones sobre niveles de contaminación";
+            this.prediction.UseVisualStyleBackColor = true;
+            this.prediction.Click += new System.EventHandler(this.prediction_Click);
             // 
             // map
             // 
@@ -260,15 +253,24 @@
             this.map.UseVisualStyleBackColor = true;
             this.map.Click += new System.EventHandler(this.map_Click);
             // 
-            // prediction
+            // label2
             // 
-            this.prediction.Location = new System.Drawing.Point(123, 160);
-            this.prediction.Name = "prediction";
-            this.prediction.Size = new System.Drawing.Size(216, 48);
-            this.prediction.TabIndex = 2;
-            this.prediction.Text = "Predicciones sobre niveles de contaminación";
-            this.prediction.UseVisualStyleBackColor = true;
-            this.prediction.Click += new System.EventHandler(this.prediction_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(283, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "A continuación, seleccione la opción que desee visualizar:";
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(229, 447);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(109, 23);
+            this.deleteButton.TabIndex = 51;
+            this.deleteButton.Text = "Eliminar filtros";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -316,13 +318,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button prediction;
         private System.Windows.Forms.Button map;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboDatoS;
     }
 }
 
