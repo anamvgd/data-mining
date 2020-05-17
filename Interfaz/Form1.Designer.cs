@@ -50,6 +50,9 @@
             this.map = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.beforeButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -213,10 +216,13 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.beforeButton);
+            this.groupBox4.Controls.Add(this.nextButton);
             this.groupBox4.Controls.Add(this.dataGridView);
             this.groupBox4.Location = new System.Drawing.Point(424, 35);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(484, 204);
+            this.groupBox4.Size = new System.Drawing.Size(484, 228);
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos";
@@ -226,7 +232,7 @@
             this.groupBox5.Controls.Add(this.prediction);
             this.groupBox5.Controls.Add(this.map);
             this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Location = new System.Drawing.Point(424, 261);
+            this.groupBox5.Location = new System.Drawing.Point(434, 289);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(442, 262);
             this.groupBox5.TabIndex = 50;
@@ -272,6 +278,35 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.button2_Click);
             // 
+            // nextButton
+            // 
+            this.nextButton.Location = new System.Drawing.Point(421, 199);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(39, 24);
+            this.nextButton.TabIndex = 47;
+            this.nextButton.Text = ">";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // beforeButton
+            // 
+            this.beforeButton.Location = new System.Drawing.Point(371, 199);
+            this.beforeButton.Name = "beforeButton";
+            this.beforeButton.Size = new System.Drawing.Size(41, 24);
+            this.beforeButton.TabIndex = 48;
+            this.beforeButton.Text = "<";
+            this.beforeButton.UseVisualStyleBackColor = true;
+            this.beforeButton.Click += new System.EventHandler(this.beforeButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(319, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Page";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +330,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
@@ -325,6 +361,9 @@
         private System.Windows.Forms.Button map;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboDatoS;
+        private System.Windows.Forms.Button beforeButton;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Label label3;
     }
 }
 

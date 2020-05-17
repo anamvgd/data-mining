@@ -22,6 +22,8 @@ namespace Interfaz
         private List<String> fechas = new List<string>();
         private List<String> tipoVariable = new List<string>();
         double limit = 0;
+        private int currentPage;
+        private bool load;
 
         public static String FILTER1 = "?source=";
         public static String FILTER2 = "?$select";
@@ -44,6 +46,7 @@ namespace Interfaz
             dataFilter.Hide();
             filterAdded.Hide();
             addButton.Hide();
+            currentPage = 1;
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -84,11 +87,10 @@ namespace Interfaz
 
         private void searchData(object sender, EventArgs e)
         {
-            filters.Text = "Sin filtros";
-
-            /*dataGridView.Rows.Clear();
-            dataGridView.Columns.Clear();*/
-            dataGridView.DataSource = null;
+            currentPage = 1;
+            label3.Text = "Page: " + currentPage;
+            nextButton.Enabled = true;
+            beforeButton.Enabled = true;
 
             dt = new DataTable();
             
@@ -116,56 +118,113 @@ namespace Interfaz
         public void readInfo(String bdId)
         {
             string result = "";
+
             try
             {
-                var url = "https://www.datos.gov.co/resource/" + bdId + ".json?" + addLink;
+                int i;
+                int j = 5000;
+
+                if (limit > 5000)
+                {
+                    if (currentPage == 1)
+                    {
+                        i = 1;
+                
+                    }
+                    else if (currentPage == 2)
+                    {
+                        i = 5001;
+                        
+                    }
+                    else if (currentPage == 3)
+                    {
+                        i = 10001;
+                       
+                    }
+                    else if (currentPage == 4)
+                    {
+                        i = 15001;
+                      
+                    }
+                    else if (currentPage == 5)
+                    {
+                        i = 20001;
+                     
+                    }
+                    else if (currentPage == 6)
+                    {
+                        i = 25001;
+                     
+                    }
+                    else if (currentPage == 7)
+                    {
+                        i = 30001;
+                     
+                    }
+                    else
+                    {
+                        i = 35001;
+                       
+                    }
+                }
+                else
+                {
+                    i = 1;
+                    j = 5000;
+                }
+
+                // + "&$offset = "+i
+
+                var url = "https://www.datos.gov.co/resource/" + bdId + ".json?" + addLink + "'&$limit=" + j + "&$offset=" + i;
                 var client = new WebClient();
                 using (var stream = client.OpenRead(url))
                 using (var reader = new StreamReader(stream))
                 {
                     String line = reader.ReadLine();
                     int count = 0;
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        String[] args = line.Split(',');
 
-                        String[] meh = args[13].Split(':');
-                        String[] meh2 = meh[1].Split('"');
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                            String[] args = line.Split(',');
 
-                        String[] la = args[5].Split(':');
-                        String[] la2 = la[1].Split('"');
+                            String[] meh = args[13].Split(':');
+                            String[] meh2 = meh[1].Split('"');
 
-                        String[] lo = args[6].Split(':');
-                        String[] lo2 = lo[1].Split('"');
+                            String[] la = args[5].Split(':');
+                            String[] la2 = la[1].Split('"');
 
-                        String[] de = args[6].Split(':');
-                        String[] de2 = de[1].Split('"');
+                            String[] lo = args[6].Split(':');
+                            String[] lo2 = lo[1].Split('"');
 
-                        String[] f = args[1].Split(':');
-                        String[] f2 = f[1].Split('"');
+                            String[] de = args[6].Split(':');
+                            String[] de2 = de[1].Split('"');
 
-                        String[] v = args[15].Split(':');
-                        String[] v2 = v[1].Split('"');
+                            String[] f = args[1].Split(':');
+                            String[] f2 = f[1].Split('"');
 
-                        String[] mu1 = args[10].Split(':');
-                        String[] municipio = mu1[1].Split('"');
+                            String[] v = args[15].Split(':');
+                            String[] v2 = v[1].Split('"');
 
-                        dt.Rows.Add("" + municipio[1], "" + v2[1], "" + f2[1], "" + la2[1], "" + lo2[1]);                      
+                            String[] mu1 = args[10].Split(':');
+                            String[] municipio = mu1[1].Split('"');
+
+                            dt.Rows.Add("" + municipio[1], "" + v2[1], "" + f2[1], "" + la2[1], "" + lo2[1]);
+
+                            if (meh2[1].Equals("PM10") || meh2[1].Equals("PM2.5"))
+                            {
+                                CultureInfo culture = new CultureInfo("en-US");
+                                latitudes.Add(Convert.ToDouble(la2[1], culture));
+                                longitudes.Add(Convert.ToDouble(lo2[1], culture));
+                                departamentos.Add(de2[1]);
+                                tipoVariable.Add(meh2[1]);
+                                fechas.Add(f2[1]);
+                                values.Add(Convert.ToDouble(v2[1], culture));
+                            }
+                            else
+                            {
+                                Console.WriteLine("F");
+                            }
                         
-                        if (meh2[1].Equals("PM10") || meh2[1].Equals("PM2.5"))
-                        {
-                            CultureInfo culture = new CultureInfo("en-US");
-                            latitudes.Add(Convert.ToDouble(la2[1],culture));
-                            longitudes.Add(Convert.ToDouble(lo2[1],culture));
-                            departamentos.Add(de2[1]);
-                            tipoVariable.Add(meh2[1]);
-                            fechas.Add(f2[1]);
-                            values.Add(Convert.ToDouble(v2[1],culture));
-                        }
-                        else
-                        {
-                            Console.WriteLine("F");
-                        }                     
                         count++;
                     }
                     Console.WriteLine(count);
@@ -197,13 +256,13 @@ namespace Interfaz
 
             if (!addLink.Equals(""))
             {
-                addLink = addLink + " AND " + filtroSeleccionado + "= '" + tipoSeleccionado + "'&$limit="+limit;
-                Console.WriteLine(addLink);
+                addLink = addLink + " AND " + filtroSeleccionado + "= '" + tipoSeleccionado ;
+               
             }
             else
             {
                 addLink = "$where=" + filtroSeleccionado + "= '" + tipoSeleccionado + "'";
-                Console.WriteLine(addLink);
+             
             }
 
 
@@ -220,11 +279,7 @@ namespace Interfaz
         private void button2_Click(object sender, EventArgs e)
         {
               filters.Text = "Sin filtros";
-        /*    dataGridView.Columns[1].Visible = false;
-            dataGridView.Columns[2].Visible = false;
-            dataGridView.Columns[3].Visible = false;
-            dataGridView.Columns[4].Visible = false;*/
-           // dataGridView.Rows.Clear();
+              dataGridView.DataSource = "";
 
         }
 
@@ -358,6 +413,28 @@ namespace Interfaz
         private void comboDatoS_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            if (currentPage < 8 && load)
+            {
+                currentPage++;
+                label3.Text = "Page: " + currentPage;
+                readInfo(urlText.Text);
+            }
+
+        }
+
+        private void beforeButton_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1 && load)
+            {
+                currentPage--;
+                label3.Text = "Page: " + currentPage;
+                readInfo(urlText.Text);
+            }
+
         }
     }
 
