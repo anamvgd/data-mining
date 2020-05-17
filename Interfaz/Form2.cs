@@ -124,7 +124,7 @@ namespace Interfaz
             xmembers = valuesX;
             ymembers = valuesY;
             dt = new DataTable();
-            dt.Columns.Add(new DataColumn("Prediccion", typeof(String)));
+            dt.Columns.Add(new DataColumn("Prediccion", typeof(Double)));
             dt.Columns.Add(new DataColumn("Tiempo", typeof(String)));
             for (int i = 0; i < valuesY.Count; i++)
             {
@@ -140,7 +140,7 @@ namespace Interfaz
             serie.ChartType = SeriesChartType.Point;
             serie.YValueMembers = "Prediccion";
             serie.XValueMember = "Tiempo";
-            serie.IsValueShownAsLabel = true;
+            serie.IsValueShownAsLabel = false;
             chart1.Series.Add(serie);
             chart1.DataSource = dt;
 
