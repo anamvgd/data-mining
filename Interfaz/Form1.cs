@@ -183,7 +183,7 @@ namespace Interfaz
 
                             String[] fechaSinHora = f2[1].Split(' ');
                             fechaSinHora = fechaSinHora[0].Split('/');
-                            double dias = Convert.ToDouble(fechaSinHora[0], culture);
+                            double dias = (Convert.ToDouble(fechaSinHora[0], culture));
                             double meses = (Convert.ToDouble(fechaSinHora[1], culture) * 30);
                             double años = (Convert.ToDouble(fechaSinHora[2], culture) * 30 * 12);
                             fechasNumbers.Add(dias + meses + años);
