@@ -43,6 +43,7 @@ namespace Interfaz
             filter.Hide();
             filters.Hide();
             comboBoxFilters.Hide();
+            comboDatoS.Hide();
             dataFilter.Hide();
             filterAdded.Hide();
             addButton.Hide();
@@ -62,19 +63,19 @@ namespace Interfaz
                 {
                     comboBoxFilters.Items.Add(filtros[i]);
                 }
-                label1.Hide();
-                labelURL.Hide();
-                urlText.Hide();
-                codeData.Hide();
+                urlText.Enabled = false;
+                codeData.Enabled = false;
                 Console.WriteLine("Succesfull");
                 filter.Show();
                 filters.Show();
                 comboBoxFilters.Show();
+                comboDatoS.Show();
                 dataFilter.Show();
                 filterAdded.Show();
                 addButton.Show();
                 searchButton.Hide();
-
+                map.Enabled = true;
+                prediction.Enabled = true;
             }
             catch (ArgumentNullException ea) {
                 Console.WriteLine("Something its wrong");
@@ -185,6 +186,7 @@ namespace Interfaz
 
                         while ((line = reader.ReadLine()) != null)
                         {
+                            Console.WriteLine("hola");
                             String[] args = line.Split(',');
 
                             String[] meh = args[13].Split(':');
@@ -434,6 +436,11 @@ namespace Interfaz
                 label3.Text = "Page: " + currentPage;
                 readInfo(urlText.Text);
             }
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
 
         }
     }

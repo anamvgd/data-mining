@@ -58,3 +58,4 @@ C:\Users\Blanca\Desktop\proyectos\data-mining\modelo\obj\Debug\modelo.csprojAsse
 C:\Users\Blanca\Desktop\proyectos\data-mining\modelo\obj\Debug\modelo.csproj.CopyComplete
 C:\Users\Blanca\Desktop\proyectos\data-mining\modelo\obj\Debug\modelo.exe
 C:\Users\Blanca\Desktop\proyectos\data-mining\modelo\obj\Debug\modelo.pdb
+C:\Users\Blanca\Desktop\proyectos\data-mining\modelo\obj\Debug\modelo.csproj.CoreCompileInputs.cache

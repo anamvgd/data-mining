@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.labelURL = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
             this.urlText = new System.Windows.Forms.TextBox();
@@ -64,7 +65,7 @@
             // 
             this.labelURL.AutoSize = true;
             this.labelURL.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelURL.ForeColor = System.Drawing.Color.White;
+            this.labelURL.ForeColor = System.Drawing.Color.Black;
             this.labelURL.Location = new System.Drawing.Point(9, 20);
             this.labelURL.Name = "labelURL";
             this.labelURL.Size = new System.Drawing.Size(103, 13);
@@ -92,6 +93,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(149)))), ((int)(((byte)(173)))));
             this.label1.Location = new System.Drawing.Point(21, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 13);
@@ -175,8 +177,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(149)))), ((int)(((byte)(173)))));
             this.groupBox1.Controls.Add(this.labelURL);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(12, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(355, 100);
@@ -186,6 +189,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(149)))), ((int)(((byte)(173)))));
             this.groupBox3.Controls.Add(this.comboDatoS);
             this.groupBox3.Controls.Add(this.addButton);
             this.groupBox3.Controls.Add(this.filters);
@@ -199,6 +203,7 @@
             this.groupBox3.TabIndex = 48;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // comboDatoS
             // 
@@ -211,7 +216,7 @@
             // 
             // addButton
             // 
-            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(27)))), ((int)(((byte)(7)))));
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(186)))), ((int)(((byte)(190)))));
             this.addButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addButton.Location = new System.Drawing.Point(317, 43);
@@ -224,12 +229,13 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(149)))), ((int)(((byte)(173)))));
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.beforeButton);
             this.groupBox4.Controls.Add(this.nextButton);
             this.groupBox4.Controls.Add(this.dataGridView);
-            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox4.ForeColor = System.Drawing.Color.Black;
             this.groupBox4.Location = new System.Drawing.Point(424, 35);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(484, 228);
@@ -240,6 +246,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(319, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
@@ -268,6 +275,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(149)))), ((int)(((byte)(173)))));
             this.groupBox5.Controls.Add(this.prediction);
             this.groupBox5.Controls.Add(this.map);
             this.groupBox5.Controls.Add(this.label2);
@@ -280,6 +288,7 @@
             // 
             // prediction
             // 
+            this.prediction.Enabled = false;
             this.prediction.Location = new System.Drawing.Point(123, 160);
             this.prediction.Name = "prediction";
             this.prediction.Size = new System.Drawing.Size(216, 48);
@@ -290,6 +299,7 @@
             // 
             // map
             // 
+            this.map.Enabled = false;
             this.map.Location = new System.Drawing.Point(120, 80);
             this.map.Name = "map";
             this.map.Size = new System.Drawing.Size(235, 45);
@@ -321,9 +331,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(130)))), ((int)(((byte)(26)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(149)))), ((int)(((byte)(173)))));
             this.ClientSize = new System.Drawing.Size(920, 575);
-            this.ControlBox = false;
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -334,6 +343,7 @@
             this.Controls.Add(this.urlText);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Buscador";
             this.Load += new System.EventHandler(this.Form1_Load);
