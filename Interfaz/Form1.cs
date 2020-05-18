@@ -12,14 +12,19 @@ namespace Interfaz
 {
     public partial class Form1 : Form
     {
+        private double rsquared;
+        private double yintercept;
+        private double slope;
         DataTable dt;
         private String url;
         private String addLink;
-        private List<Double> latitudes= new List<Double>();
+        private List<Double> latitudes = new List<Double>();
         private List<Double> longitudes = new List<Double>();
         private List<Double> values = new List<Double>();
+        private List<Double> valuesPrediction = new List<double>();
         private List<String> departamentos = new List<string>();
         private List<String> fechas = new List<string>();
+        private List<Double> fechasNumbers = new List<double>();
         private List<String> tipoVariable = new List<string>();
         double limit = 0;
         private int currentPage;
@@ -227,6 +232,7 @@ namespace Interfaz
                                 Console.WriteLine("F");
                             }
                         
+
                         count++;
                     }
                     Console.WriteLine(count);
@@ -280,8 +286,10 @@ namespace Interfaz
 
         private void button2_Click(object sender, EventArgs e)
         {
+
               filters.Text = "Sin filtros";
               dataGridView.DataSource = "";
+
 
         }
 
@@ -292,9 +300,65 @@ namespace Interfaz
 
         private void prediction_Click(object sender, EventArgs e)
         {
-            Form predictions = new Form2();
+            linearRegression(fechasNumbers, values, out rsquared, out yintercept, out slope);
+            linearAplication(yintercept, slope);
+            Form2 predictions = new Form2();
+            predictions.graficarPredicciones(valuesPrediction, fechasNumbers);
             predictions.Show();
         }
+
+        private void linearRegression(List<Double> xVals, List<Double> yVals,
+                                        out double rsquared, out double yintercept,
+                                        out double slope)
+        {
+            //Debug.Assert(xVals.Length == yVals.Length);
+            double sumOfX = 0;
+            double sumOfY = 0;
+            double sumOfXSq = 0;
+            double sumOfYSq = 0;
+            double ssX = 0;
+            double ssY = 0;
+            double sumCodeviates = 0;
+            double sCo = 0;
+            double count = 0;
+
+            for (int ctr = 0; ctr < xVals.Count; ctr++)
+            {
+                double x = xVals[ctr];
+                double y = yVals[ctr];
+                sumCodeviates += x * y;
+                sumOfX += x;
+                sumOfY += y;
+                sumOfXSq += x * x;
+                sumOfYSq += y * y;
+                count++;
+            }
+            ssX = sumOfXSq - ((sumOfX * sumOfX) / count);
+            ssY = sumOfYSq - ((sumOfY * sumOfY) / count);
+            double RNumerator = (count * sumCodeviates) - (sumOfX * sumOfY);
+            double RDenom = (count * sumOfXSq - (sumOfX * sumOfX))
+             * (count * sumOfYSq - (sumOfY * sumOfY));
+            sCo = sumCodeviates - ((sumOfX * sumOfY) / count);
+
+            double meanX = sumOfX / count;
+            double meanY = sumOfY / count;
+            double dblR = RNumerator / Math.Sqrt(RDenom);
+            rsquared = dblR * dblR;
+            yintercept = meanY - ((sCo / ssX) * meanX);
+            slope = sCo / ssX;
+        }
+
+        private void linearAplication(double yintercept, double slope)
+        {
+            List<Double> valuesCalculated = new List<double>();
+            for (int i = 0; i < fechasNumbers.Count; i++)
+            {
+                valuesCalculated.Add((fechasNumbers[i] * slope) + yintercept);
+            }
+            valuesPrediction = valuesCalculated;
+        }
+
+      
 
         private void map_Click(object sender, EventArgs e)
         {
