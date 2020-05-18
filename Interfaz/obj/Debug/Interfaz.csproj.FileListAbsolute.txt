@@ -151,4 +151,4 @@ C:\Users\johan\OneDrive\Documentos\GitHub\data-mining\Interfaz\obj\Debug\Interfa
 C:\Users\johan\OneDrive\Documentos\GitHub\data-mining\Interfaz\obj\Debug\Interfaz.csproj.CopyComplete
 C:\Users\johan\OneDrive\Documentos\GitHub\data-mining\Interfaz\obj\Debug\Interfaz.exe
 C:\Users\johan\OneDrive\Documentos\GitHub\data-mining\Interfaz\obj\Debug\Interfaz.pdb
-
+C:\Users\Blanca\Desktop\proyectos\data-mining\Interfaz\obj\Debug\Interfaz.csproj.CoreCompileInputs.cache

@@ -69,3 +69,4 @@ C:\Users\johan\OneDrive\Documentos\GitHub\data-mining\modelo\obj\Debug\modelo.cs
 C:\Users\johan\OneDrive\Documentos\GitHub\data-mining\modelo\obj\Debug\modelo.exe
 C:\Users\johan\OneDrive\Documentos\GitHub\data-mining\modelo\obj\Debug\modelo.pdb
 C:\Users\johan\OneDrive\Documentos\GitHub\data-mining\modelo\obj\Debug\modelo.csprojAssemblyReference.cache
+C:\Users\Blanca\Desktop\proyectos\data-mining\modelo\obj\Debug\modelo.csproj.CoreCompileInputs.cache

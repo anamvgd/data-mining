@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.labelURL = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
             this.urlText = new System.Windows.Forms.TextBox();
@@ -45,15 +46,16 @@
             this.comboDatoS = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.beforeButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.prediction = new System.Windows.Forms.Button();
             this.map = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.nextButton = new System.Windows.Forms.Button();
-            this.beforeButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -62,100 +64,116 @@
             // labelURL
             // 
             this.labelURL.AutoSize = true;
-            this.labelURL.Location = new System.Drawing.Point(37, 70);
+            this.labelURL.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelURL.Location = new System.Drawing.Point(9, 26);
             this.labelURL.Name = "labelURL";
-            this.labelURL.Size = new System.Drawing.Size(86, 13);
+            this.labelURL.Size = new System.Drawing.Size(103, 17);
             this.labelURL.TabIndex = 1;
             this.labelURL.Text = "Id base de datos";
             // 
             // searchButton
             // 
+            this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.searchButton.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.Location = new System.Drawing.Point(24, 403);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(140, 23);
             this.searchButton.TabIndex = 35;
             this.searchButton.Text = "Buscar Base de Datos";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // urlText
             // 
-            this.urlText.Location = new System.Drawing.Point(129, 67);
+            this.urlText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(186)))), ((int)(((byte)(190)))));
+            this.urlText.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urlText.Location = new System.Drawing.Point(124, 23);
             this.urlText.Name = "urlText";
-            this.urlText.Size = new System.Drawing.Size(200, 20);
+            this.urlText.Size = new System.Drawing.Size(200, 24);
             this.urlText.TabIndex = 36;
             this.urlText.Text = "ysq6-ri4e";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 119);
+            this.label1.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.Size = new System.Drawing.Size(112, 14);
             this.label1.TabIndex = 37;
             this.label1.Text = "Codigo Unico Datos";
             // 
             // codeData
             // 
-            this.codeData.Location = new System.Drawing.Point(129, 116);
+            this.codeData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(186)))), ((int)(((byte)(190)))));
+            this.codeData.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeData.Location = new System.Drawing.Point(124, 66);
             this.codeData.Name = "codeData";
-            this.codeData.Size = new System.Drawing.Size(200, 20);
+            this.codeData.Size = new System.Drawing.Size(200, 22);
             this.codeData.TabIndex = 38;
             this.codeData.Text = "oipJOeStVp83pvoG20CMSGiXe";
             // 
             // filter
             // 
             this.filter.AutoSize = true;
-            this.filter.Location = new System.Drawing.Point(61, 19);
+            this.filter.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filter.Location = new System.Drawing.Point(61, 22);
             this.filter.Name = "filter";
-            this.filter.Size = new System.Drawing.Size(34, 13);
+            this.filter.Size = new System.Drawing.Size(44, 17);
             this.filter.TabIndex = 39;
             this.filter.Text = "Filtros";
             // 
             // comboBoxFilters
             // 
+            this.comboBoxFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(186)))), ((int)(((byte)(190)))));
             this.comboBoxFilters.FormattingEnabled = true;
             this.comboBoxFilters.Location = new System.Drawing.Point(111, 19);
             this.comboBoxFilters.Name = "comboBoxFilters";
-            this.comboBoxFilters.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxFilters.Size = new System.Drawing.Size(200, 25);
             this.comboBoxFilters.TabIndex = 40;
             this.comboBoxFilters.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilters_SelectedIndexChanged);
             // 
             // filterAdded
             // 
             this.filterAdded.AutoSize = true;
-            this.filterAdded.Location = new System.Drawing.Point(24, 102);
+            this.filterAdded.Location = new System.Drawing.Point(15, 118);
             this.filterAdded.Name = "filterAdded";
-            this.filterAdded.Size = new System.Drawing.Size(81, 13);
+            this.filterAdded.Size = new System.Drawing.Size(112, 17);
             this.filterAdded.TabIndex = 41;
             this.filterAdded.Text = "Filtros Añadidos";
             // 
             // dataFilter
             // 
             this.dataFilter.AutoSize = true;
-            this.dataFilter.Location = new System.Drawing.Point(15, 62);
+            this.dataFilter.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataFilter.Location = new System.Drawing.Point(10, 62);
             this.dataFilter.Name = "dataFilter";
-            this.dataFilter.Size = new System.Drawing.Size(80, 13);
+            this.dataFilter.Size = new System.Drawing.Size(102, 17);
             this.dataFilter.TabIndex = 42;
             this.dataFilter.Text = "Dato Para Filtro";
             // 
             // filters
             // 
             this.filters.AutoSize = true;
-            this.filters.Location = new System.Drawing.Point(122, 101);
+            this.filters.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filters.Location = new System.Drawing.Point(133, 118);
             this.filters.Name = "filters";
-            this.filters.Size = new System.Drawing.Size(49, 13);
+            this.filters.Size = new System.Drawing.Size(62, 17);
             this.filters.TabIndex = 44;
             this.filters.Text = "Sin filtros";
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(229, 403);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 23);
             this.button1.TabIndex = 45;
             this.button1.Text = "Buscar Datos";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.searchData);
             // 
             // dataGridView
@@ -172,12 +190,18 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.urlText);
+            this.groupBox1.Controls.Add(this.labelURL);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.codeData);
+            this.groupBox1.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(355, 100);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Base de datos ";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox3
             // 
@@ -188,6 +212,7 @@
             this.groupBox3.Controls.Add(this.filterAdded);
             this.groupBox3.Controls.Add(this.comboBoxFilters);
             this.groupBox3.Controls.Add(this.filter);
+            this.groupBox3.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 157);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(406, 240);
@@ -197,21 +222,24 @@
             // 
             // comboDatoS
             // 
+            this.comboDatoS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(186)))), ((int)(((byte)(190)))));
             this.comboDatoS.FormattingEnabled = true;
             this.comboDatoS.Location = new System.Drawing.Point(111, 59);
             this.comboDatoS.Name = "comboDatoS";
-            this.comboDatoS.Size = new System.Drawing.Size(200, 21);
+            this.comboDatoS.Size = new System.Drawing.Size(200, 25);
             this.comboDatoS.TabIndex = 47;
             this.comboDatoS.SelectedIndexChanged += new System.EventHandler(this.comboDatoS_SelectedIndexChanged);
             // 
             // addButton
             // 
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addButton.Location = new System.Drawing.Point(317, 43);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 46;
             this.addButton.Text = "Agregar";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // groupBox4
@@ -220,6 +248,7 @@
             this.groupBox4.Controls.Add(this.beforeButton);
             this.groupBox4.Controls.Add(this.nextButton);
             this.groupBox4.Controls.Add(this.dataGridView);
+            this.groupBox4.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(424, 35);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(484, 228);
@@ -227,11 +256,45 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(319, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 17);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Page";
+            // 
+            // beforeButton
+            // 
+            this.beforeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.beforeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.beforeButton.Location = new System.Drawing.Point(371, 199);
+            this.beforeButton.Name = "beforeButton";
+            this.beforeButton.Size = new System.Drawing.Size(41, 24);
+            this.beforeButton.TabIndex = 48;
+            this.beforeButton.Text = "<";
+            this.beforeButton.UseVisualStyleBackColor = false;
+            this.beforeButton.Click += new System.EventHandler(this.beforeButton_Click);
+            // 
+            // nextButton
+            // 
+            this.nextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.nextButton.Location = new System.Drawing.Point(421, 199);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(39, 24);
+            this.nextButton.TabIndex = 47;
+            this.nextButton.Text = ">";
+            this.nextButton.UseVisualStyleBackColor = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.prediction);
             this.groupBox5.Controls.Add(this.map);
             this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(434, 289);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(442, 262);
@@ -241,22 +304,28 @@
             // 
             // prediction
             // 
+            this.prediction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.prediction.Enabled = false;
+            this.prediction.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.prediction.Location = new System.Drawing.Point(123, 160);
             this.prediction.Name = "prediction";
             this.prediction.Size = new System.Drawing.Size(216, 48);
             this.prediction.TabIndex = 2;
             this.prediction.Text = "Predicciones sobre niveles de contaminación";
-            this.prediction.UseVisualStyleBackColor = true;
+            this.prediction.UseVisualStyleBackColor = false;
             this.prediction.Click += new System.EventHandler(this.prediction_Click);
             // 
             // map
             // 
+            this.map.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.map.Enabled = false;
+            this.map.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.map.Location = new System.Drawing.Point(120, 80);
             this.map.Name = "map";
             this.map.Size = new System.Drawing.Size(235, 45);
             this.map.TabIndex = 1;
             this.map.Text = "Mapa de niveles de contaminación";
-            this.map.UseVisualStyleBackColor = true;
+            this.map.UseVisualStyleBackColor = false;
             this.map.Click += new System.EventHandler(this.map_Click);
             // 
             // label2
@@ -264,69 +333,43 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(36, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 13);
+            this.label2.Size = new System.Drawing.Size(372, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "A continuación, seleccione la opción que desee visualizar:";
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.deleteButton.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.Location = new System.Drawing.Point(229, 447);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(109, 23);
             this.deleteButton.TabIndex = 51;
             this.deleteButton.Text = "Eliminar filtros";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // nextButton
-            // 
-            this.nextButton.Location = new System.Drawing.Point(421, 199);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(39, 24);
-            this.nextButton.TabIndex = 47;
-            this.nextButton.Text = ">";
-            this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
-            // 
-            // beforeButton
-            // 
-            this.beforeButton.Location = new System.Drawing.Point(371, 199);
-            this.beforeButton.Name = "beforeButton";
-            this.beforeButton.Size = new System.Drawing.Size(41, 24);
-            this.beforeButton.TabIndex = 48;
-            this.beforeButton.Text = "<";
-            this.beforeButton.UseVisualStyleBackColor = true;
-            this.beforeButton.Click += new System.EventHandler(this.beforeButton_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(319, 202);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "Page";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(120)))), ((int)(((byte)(115)))));
             this.ClientSize = new System.Drawing.Size(920, 575);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.codeData);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.urlText);
             this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.labelURL);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Buscador";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -334,7 +377,6 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
