@@ -106,6 +106,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chart1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = "Estadisticas";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

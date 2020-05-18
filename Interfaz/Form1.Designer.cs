@@ -364,6 +364,7 @@
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Buscador";
             this.Load += new System.EventHandler(this.Form1_Load);
