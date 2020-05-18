@@ -17,6 +17,9 @@ namespace Interfaz
     public partial class Form2 : Form
     {
         DataTable dt;
+        List<double> xmembers;
+        List<double> ymembers;
+
         public Form2()
         {
             InitializeComponent();
@@ -46,7 +49,9 @@ namespace Interfaz
                         String[] args4 = args[2].Split(':');
                         String[] args5 = args4[1].Split('"');
                         Console.WriteLine(args4[1]);
-                        dt.Rows.Add(args3[1],args5[1]);
+                        if (args3[1].Equals("PM2.5") || args3[1].Equals("PM10")) {
+                            dt.Rows.Add(args3[1], args5[1]);
+                        }
                         count++;
                     }
                     reader.Close();
@@ -111,11 +116,44 @@ namespace Interfaz
             serie.IsValueShownAsLabel = true;
             chart1.Series.Add(serie);
             chart1.DataSource = dt;
+            
+        }
+
+        public void graficarPredicciones(List<double> valuesY, List<double> valuesX) {
+
+            xmembers = valuesX;
+            ymembers = valuesY;
+            dt = new DataTable();
+            dt.Columns.Add(new DataColumn("Prediccion", typeof(Double)));
+            dt.Columns.Add(new DataColumn("Tiempo", typeof(String)));
+            for (int i = 0; i < valuesY.Count; i++)
+            {
+                dt.Rows.Add(valuesY[i], valuesX[i]);
+            }
+            chart1.Titles.Clear();
+            chart1.Series.Clear();
+            chart1.ChartAreas.Clear();
+            chart1.Palette = ChartColorPalette.Excel;
+            ChartArea areagrafico = new ChartArea();
+            chart1.ChartAreas.Add(areagrafico);
+            Series serie = new Series("Predicciones");
+            serie.ChartType = SeriesChartType.Point;
+            serie.YValueMembers = "Prediccion";
+            serie.XValueMember = "Tiempo";
+            serie.IsValueShownAsLabel = false;
+            chart1.Series.Add(serie);
+            chart1.DataSource = dt;
+
         }
 
         private void back_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            graficarPredicciones(ymembers,xmembers);
         }
     }
 }

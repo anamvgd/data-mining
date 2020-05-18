@@ -33,6 +33,7 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,29 +55,41 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(700, 525);
+            this.button1.Location = new System.Drawing.Point(702, 400);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(190, 34);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Actualizar";
+            this.button1.Text = "Datos Actuales";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(817, 525);
+            this.back.Location = new System.Drawing.Point(702, 514);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(64, 21);
+            this.back.Size = new System.Drawing.Size(190, 32);
             this.back.TabIndex = 2;
             this.back.Text = "Regresar";
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(702, 458);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(190, 33);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Predicciones";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 575);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.back);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chart1);
@@ -92,5 +105,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Button button2;
     }
 }
