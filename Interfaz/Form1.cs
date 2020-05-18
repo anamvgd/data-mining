@@ -226,12 +226,19 @@ namespace Interfaz
                             tipoVariable.Add(meh2[1]);
                             fechas.Add(f2[1]);
 
-                            String[] fechaSinHora = f2[1].Split(' ');
-                            fechaSinHora = fechaSinHora[0].Split('/');
-                            double dias = (Convert.ToDouble(fechaSinHora[0], culture) / 360);
-                            double meses = (Convert.ToDouble(fechaSinHora[1], culture) / 30);
-                            double años = (Convert.ToDouble(fechaSinHora[2], culture));
-                            fechasNumbers.Add(dias + meses + años);
+                            if (fechasNumbers.Count == 0)
+                            {
+                                String[] fechaSinHora = f2[1].Split(' ');
+                                fechaSinHora = fechaSinHora[0].Split('/');
+                                double dias = (Convert.ToDouble(fechaSinHora[0], culture) / 360);
+                                double meses = (Convert.ToDouble(fechaSinHora[1], culture) / 30);
+                                double años = (Convert.ToDouble(fechaSinHora[2], culture));
+                                fechasNumbers.Add(dias + meses + años);
+                            }
+                            else 
+                            {
+                                fechasNumbers.Add(fechasNumbers[fechasNumbers.Count-1] + 0.03);
+                            }
 
                             values.Add(Convert.ToDouble(v2[1], culture));
                         }
