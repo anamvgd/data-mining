@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(map));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.StartCustomSettings = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboParticle = new System.Windows.Forms.ComboBox();
             this.comboDateStart = new System.Windows.Forms.ComboBox();
@@ -37,7 +38,6 @@
             this.buttonGo = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gmap = new GMap.NET.WindowsForms.GMapControl();
-            this.StartCustomSettings = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,67 +49,79 @@
             this.groupBox1.Controls.Add(this.comboDateStart);
             this.groupBox1.Controls.Add(this.comboDateFinish);
             this.groupBox1.Controls.Add(this.buttonGo);
-            this.groupBox1.Location = new System.Drawing.Point(32, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(24, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(356, 523);
+            this.groupBox1.Size = new System.Drawing.Size(267, 425);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // StartCustomSettings
+            // 
+            this.StartCustomSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.StartCustomSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.StartCustomSettings.Location = new System.Drawing.Point(6, 251);
+            this.StartCustomSettings.Name = "StartCustomSettings";
+            this.StartCustomSettings.Size = new System.Drawing.Size(255, 23);
+            this.StartCustomSettings.TabIndex = 6;
+            this.StartCustomSettings.Text = "Start Custom Settings";
+            this.StartCustomSettings.UseVisualStyleBackColor = false;
+            this.StartCustomSettings.Click += new System.EventHandler(this.StartCustomSettingEvent);
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 43);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(186)))), ((int)(((byte)(190)))));
+            this.textBox1.Location = new System.Drawing.Point(6, 35);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 22);
+            this.textBox1.Size = new System.Drawing.Size(255, 24);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Department";
             // 
             // comboParticle
             // 
+            this.comboParticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(186)))), ((int)(((byte)(190)))));
             this.comboParticle.FormattingEnabled = true;
             this.comboParticle.Items.AddRange(new object[] {
             "PM10",
             "PM2.5"});
-            this.comboParticle.Location = new System.Drawing.Point(8, 108);
-            this.comboParticle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboParticle.Location = new System.Drawing.Point(6, 88);
             this.comboParticle.Name = "comboParticle";
-            this.comboParticle.Size = new System.Drawing.Size(339, 24);
+            this.comboParticle.Size = new System.Drawing.Size(255, 25);
             this.comboParticle.TabIndex = 4;
             this.comboParticle.Text = "Kind of particle";
             // 
             // comboDateStart
             // 
+            this.comboDateStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(186)))), ((int)(((byte)(190)))));
             this.comboDateStart.FormattingEnabled = true;
-            this.comboDateStart.Location = new System.Drawing.Point(8, 171);
-            this.comboDateStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboDateStart.Location = new System.Drawing.Point(6, 139);
             this.comboDateStart.Name = "comboDateStart";
-            this.comboDateStart.Size = new System.Drawing.Size(339, 24);
+            this.comboDateStart.Size = new System.Drawing.Size(255, 25);
             this.comboDateStart.TabIndex = 3;
             this.comboDateStart.Text = "Date start";
             // 
             // comboDateFinish
             // 
+            this.comboDateFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(186)))), ((int)(((byte)(190)))));
             this.comboDateFinish.FormattingEnabled = true;
-            this.comboDateFinish.Location = new System.Drawing.Point(8, 236);
-            this.comboDateFinish.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboDateFinish.Location = new System.Drawing.Point(6, 192);
             this.comboDateFinish.Name = "comboDateFinish";
-            this.comboDateFinish.Size = new System.Drawing.Size(339, 24);
+            this.comboDateFinish.Size = new System.Drawing.Size(255, 25);
             this.comboDateFinish.TabIndex = 2;
             this.comboDateFinish.Text = "Date finish";
             // 
             // buttonGo
             // 
-            this.buttonGo.Location = new System.Drawing.Point(8, 364);
-            this.buttonGo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonGo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
+            this.buttonGo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonGo.Location = new System.Drawing.Point(6, 296);
             this.buttonGo.Name = "buttonGo";
-            this.buttonGo.Size = new System.Drawing.Size(340, 28);
+            this.buttonGo.Size = new System.Drawing.Size(255, 23);
             this.buttonGo.TabIndex = 0;
             this.buttonGo.Text = "Start";
-            this.buttonGo.UseVisualStyleBackColor = true;
+            this.buttonGo.UseVisualStyleBackColor = false;
             this.buttonGo.Click += new System.EventHandler(this.button1_Click);
             // 
             // gmap
@@ -120,8 +132,7 @@
             this.gmap.GrayScaleMode = false;
             this.gmap.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gmap.LevelsKeepInMemory = 5;
-            this.gmap.Location = new System.Drawing.Point(411, 16);
-            this.gmap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gmap.Location = new System.Drawing.Point(308, 13);
             this.gmap.MarkersEnabled = true;
             this.gmap.MaxZoom = 2;
             this.gmap.MinZoom = 2;
@@ -135,31 +146,20 @@
             this.gmap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gmap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gmap.ShowTileGridLines = false;
-            this.gmap.Size = new System.Drawing.Size(640, 523);
+            this.gmap.Size = new System.Drawing.Size(480, 425);
             this.gmap.TabIndex = 1;
             this.gmap.Zoom = 0D;
             this.gmap.Load += new System.EventHandler(this.gmap_Load);
             // 
-            // StartCustomSettings
-            // 
-            this.StartCustomSettings.Location = new System.Drawing.Point(8, 309);
-            this.StartCustomSettings.Margin = new System.Windows.Forms.Padding(4);
-            this.StartCustomSettings.Name = "StartCustomSettings";
-            this.StartCustomSettings.Size = new System.Drawing.Size(340, 28);
-            this.StartCustomSettings.TabIndex = 6;
-            this.StartCustomSettings.Text = "Start Custom Settings";
-            this.StartCustomSettings.UseVisualStyleBackColor = true;
-            this.StartCustomSettings.Click += new System.EventHandler(this.StartCustomSettingEvent);
-            // 
             // map
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(120)))), ((int)(((byte)(115)))));
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gmap);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "map";
             this.Text = "map";
