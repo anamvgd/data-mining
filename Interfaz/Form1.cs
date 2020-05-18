@@ -182,7 +182,7 @@ namespace Interfaz
 
                 // + "&$offset = "+i
 
-                var url = "https://www.datos.gov.co/resource/" + bdId + ".json?" + addLink + "'&$limit=" + j + "&$offset=" + i;
+                var url = "https://www.datos.gov.co/resource/" + bdId + ".json?" + addLink + "&$limit=" + j + "&$offset=" + i;
                 var client = new WebClient();
                 using (var stream = client.OpenRead(url))
                 using (var reader = new StreamReader(stream))
