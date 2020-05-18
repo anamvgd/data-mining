@@ -219,14 +219,22 @@ namespace Interfaz
 
                             if (meh2[1].Equals("PM10") || meh2[1].Equals("PM2.5"))
                             {
-                                CultureInfo culture = new CultureInfo("en-US");
-                                latitudes.Add(Convert.ToDouble(la2[1], culture));
-                                longitudes.Add(Convert.ToDouble(lo2[1], culture));
-                                departamentos.Add(de2[1]);
-                                tipoVariable.Add(meh2[1]);
-                                fechas.Add(f2[1]);
-                                values.Add(Convert.ToDouble(v2[1], culture));
-                            }
+                            CultureInfo culture = new CultureInfo("en-US");
+                            latitudes.Add(Convert.ToDouble(la2[1], culture));
+                            longitudes.Add(Convert.ToDouble(lo2[1], culture));
+                            departamentos.Add(de2[1]);
+                            tipoVariable.Add(meh2[1]);
+                            fechas.Add(f2[1]);
+
+                            String[] fechaSinHora = f2[1].Split(' ');
+                            fechaSinHora = fechaSinHora[0].Split('/');
+                            double dias = (Convert.ToDouble(fechaSinHora[0], culture) / 360);
+                            double meses = (Convert.ToDouble(fechaSinHora[1], culture) / 30);
+                            double años = (Convert.ToDouble(fechaSinHora[2], culture));
+                            fechasNumbers.Add(dias + meses + años);
+
+                            values.Add(Convert.ToDouble(v2[1], culture));
+                        }
                             else
                             {
                                 Console.WriteLine("F");
