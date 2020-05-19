@@ -154,6 +154,7 @@ namespace Interfaz
         private void button2_Click(object sender, EventArgs e)
         {
             graficarPredicciones(ymembers,xmembers);
+            MessageBox.Show("La dirección de la recta se interpreta como aumento o disminución de contaminación", "Interpretación", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

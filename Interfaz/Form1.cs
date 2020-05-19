@@ -53,12 +53,15 @@ namespace Interfaz
             comboDatoS.Hide();
             addButton.Hide();
             currentPage = 1;
+            MessageBox.Show("Por favor seleccione botón Buscar Base de Datos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void searchButton_Click(object sender, EventArgs e)
         {
             try
             {
+                MessageBox.Show("Por favor seleccione filtro para departamento y variable", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 List<string> filtros = new List<string>();
                 filtros.Add("Departamento");
                 filtros.Add("Variable");
@@ -260,6 +263,7 @@ namespace Interfaz
             {
                 result = string.Format("F", e);
                 Console.WriteLine(result);
+                MessageBox.Show("Por favor seleccione filtro para departamento y variable", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -279,7 +283,7 @@ namespace Interfaz
 
             if (!addLink.Equals(""))
             {
-                addLink = addLink + " AND " + filtroSeleccionado + "= '" + tipoSeleccionado ;
+                addLink = addLink + " AND " + filtroSeleccionado + "= '" + tipoSeleccionado + "'" ;
                
             }
             else
@@ -380,6 +384,7 @@ namespace Interfaz
             map map = new map();
             map.getData(fechas,tipoVariable,latitudes,longitudes,departamentos,values);
             map.Show();
+            MessageBox.Show("Por favor escriba desde teclado el departamento por buscar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void comboBoxFilters_SelectedIndexChanged(object sender, EventArgs e)
