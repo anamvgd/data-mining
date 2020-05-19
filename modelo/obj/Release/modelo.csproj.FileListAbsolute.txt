@@ -1,0 +1,10 @@
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\bin\Release\modelo.exe.config
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\bin\Release\modelo.exe
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\bin\Release\modelo.pdb
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\bin\Release\Newtonsoft.Json.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\bin\Release\SODA.dll
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\bin\Release\Newtonsoft.Json.xml
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\obj\Release\modelo.csproj.CopyComplete
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\obj\Release\modelo.exe
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\obj\Release\modelo.pdb
+C:\Users\jdjim\Documents\Proyectos U\data-mining\modelo\obj\Release\modelo.csprojAssemblyReference.cache
