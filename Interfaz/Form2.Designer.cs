@@ -35,6 +35,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(185)))), ((int)(((byte)(143)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(702, 400);
+            this.button1.Location = new System.Drawing.Point(702, 349);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(190, 34);
             this.button1.TabIndex = 1;
@@ -95,12 +97,35 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // comboBox
+            // 
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Items.AddRange(new object[] {
+            "Dispersion",
+            "Barras"});
+            this.comboBox.Location = new System.Drawing.Point(702, 419);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(190, 21);
+            this.comboBox.TabIndex = 4;
+            this.comboBox.Text = "Dispersion";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(699, 403);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Tipo de prediccion";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(120)))), ((int)(((byte)(115)))));
             this.ClientSize = new System.Drawing.Size(920, 575);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.back);
             this.Controls.Add(this.button1);
@@ -111,6 +136,7 @@
             this.Text = "Estadisticas";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -120,5 +146,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

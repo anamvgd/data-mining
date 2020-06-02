@@ -137,7 +137,15 @@ namespace Interfaz
             ChartArea areagrafico = new ChartArea();
             chart1.ChartAreas.Add(areagrafico);
             Series serie = new Series("Predicciones");
-            serie.ChartType = SeriesChartType.Point;
+            if (comboBox.Text.Equals("Dispersion"))
+            {
+                serie.ChartType = SeriesChartType.Point;
+            } else if (comboBox.Text.Equals("Barras")) 
+            {
+                serie.ChartType = SeriesChartType.Column;
+            }
+                
+            
             serie.YValueMembers = "Prediccion";
             serie.XValueMember = "Tiempo";
             serie.IsValueShownAsLabel = false;
@@ -154,7 +162,14 @@ namespace Interfaz
         private void button2_Click(object sender, EventArgs e)
         {
             graficarPredicciones(ymembers,xmembers);
-            MessageBox.Show("La dirección de la recta se interpreta como aumento o disminución de contaminación", "Interpretación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (comboBox.Text.Equals("Dispersion"))
+            {
+                MessageBox.Show("La dirección de la recta se interpreta como aumento o disminución de contaminación", "Interpretación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } else if (comboBox.Text.Equals("Barras")) 
+            {
+                MessageBox.Show("Como las barras se encuentran demasiado cerca debido a la cantidad de datos se ven unidas", "Interpretación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
     }
 }
