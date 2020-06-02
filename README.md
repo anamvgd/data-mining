@@ -20,6 +20,6 @@ The stages of development of this project are distributed in the following insta
  <li><a href="https://github.com/anamvgd/data-mining/tree/master/1.%20Primera%20Entrega">First Delivery</a>. First aproach to the problem and data. Exploring data using a Query API.</li>
  <li><a href="https://github.com/anamvgd/data-mining/tree/master/2.%20Segunda%20Entrega">Second Delivery</a>. Organizing the project. Refining the requeriments and design.</li>
  <li><a href="https://github.com/anamvgd/data-mining/tree/master/3.%20Tercera%20Entrega/Diagramas%20de%20secuencia">Third Delivery</a>. Development interesting reports: charts and tables.</li>
- <li><a href="https://youtu.be/BsMlVGfpWoQ">Final Delvery</a>. Development and application of an information analysis algorithm. Presentation of the final program.</li>
+ <li><a href="https://youtu.be/BsMlVGfpWoQ">Final Delivery</a>. Development and application of an information analysis algorithm. Presentation of the final program.</li>
 </ul>
 </body>
