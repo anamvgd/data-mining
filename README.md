@@ -23,5 +23,5 @@ The stages of development of this project are distributed in the following insta
  <li><a href="https://youtu.be/BsMlVGfpWoQ">Final Delivery</a>. Development and application of an information analysis algorithm. Presentation of the final program.</li>
 </ul>
 
-<h2><a href="https://youtu.be/dCH76gQJ26w">¡LECCIONES APRENDIDAS!</a></h2>
+<h2><a href="https://www.youtube.com/watch?v=CrZubI4MvC0">¡LECCIONES APRENDIDAS!</a></h2>
 </body>
